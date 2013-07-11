@@ -35,10 +35,10 @@ Vimfiler
 ------------
 
 +   `\fe` :
-    _<C-u>VimFilerBufferDir -quit<CR>_ :現在開いているバッファのディレクトリを開く
+    _Ctrl+u VimFilerBufferDir -quit_ :現在開いているバッファのディレクトリを開く
 
 +   `\fi` :
-    _<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>_ :現在開いているバッファのディレクトリをIDEっぽく開く
+    _Ctrl+u VimFilerBufferDir -split -simple -winwidth=35 -no-quit_ :現在開いているバッファのディレクトリをIDEっぽく開く
 
 ### Vimfiler開いている時
 +   `e` :
@@ -91,9 +91,9 @@ Window移動
 -----------
 
 +   `sh`:
-    _<C-w>h :ひとつ右のウィンドウに移動。
+    _Ctrl+w h :ひとつ右のウィンドウに移動。
 
 +   `sl`:
-    _<C-w>l :ひとつ左のウィンドウに移動。
+    _Ctrl+w l :ひとつ左のウィンドウに移動。
 
 
