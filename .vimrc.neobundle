@@ -1,0 +1,61 @@
+""".vimrc.neobundle
+
+" see : github.com/Shougo/neobundle.vim/README.md
+
+filetype off
+"set nocompatible
+
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Utility {{{
+
+ " vimshell
+ NeoBundle 'Shougo/vimshell.git'
+
+ " vimproc : execute asynchronously from vim
+ NeoBundle 'Shougo/vimproc'
+
+ " vim-scripts repos
+ NeoBundle 'L9'
+
+ " utility to manage file
+ NeoBundle 'Shougo/vimfiler.git'
+
+ " keyword completion system
+ NeoBundle 'Shougo/neocomplcache.vim'
+
+ " snippet support
+ NeoBundle 'Shougo/neosnippet'
+
+" }}}
+
+" Unite {{{
+ 
+ " unite.vim : incredible vim plugin implemented with vim script
+ NeoBundle 'Shougo/unite.vim'
+ NeoBundle 'tsukkee/unite-help'
+ NeoBundle 'Shougo/unite-outline'
+ NeoBundle 'thinca/vim-unite-history'
+ NeoBundle 'tsukkee/unite-tag'
+ NeoBundle 'choplin/unite-vim_hacks'
+
+" }}}
+
+" Scala {{{
+ 
+ " vim-scala : syntax highlight for scala lang
+ NeoBundle 'derekwyatt/vim-scala'
+
+ " vim-scala : scala dictionary for vim
+ "NeoBundle 'yuroyoro/vim-scala'
+
+" }}}
+
+filetype plugin indent on

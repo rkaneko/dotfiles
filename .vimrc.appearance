@@ -1,0 +1,31 @@
+""" .vimrc.appearance
+"-------------------------------------------------
+" config appearance
+"-------------------------------------------------
+
+set showmatch            " 括弧の対応をハイライト
+set number               " show line number
+"set list                 " 不可視文字表示
+
+" ref : http://goo.gl/dToJC
+" show line tail space
+highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
+au BufWinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
+au WinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
+
+" show line head tab
+highlight TabString ctermbg=red guibg=red
+au BufWinEnter * let w:m2 = matchadd("TabString", '^\t+')
+au WinEnter * let w:m2 = matchadd("TabString", '^\t+')
+
+" show fullwidth space
+highlight ZenkakuSpace cterm=underline guibg=#666666
+au BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+au WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+
+set cursorline           " highlight cursor line
+
+" change completion menu background
+highlight Pmenu ctermbg=8
+highlight PmenuSel ctermbg=1
+highlight PmenuSbar ctermbg=0

@@ -1,0 +1,11 @@
+c.dict : yuroyoro/dotfiles/.vim/dict/c.dict
+
+cpp.dict : yuroyoro/dotfiles/.vim/dict/cpp.dict
+
+java.dict : yuroyoro/dotfiles/.vim/dict/java.dict
+
+javascript.dict : yuroyoro/dotfiles/.vim/dict/javascript.dict
+
+php.dict : yuroyoro/dotfiles/.vim/dict/php.dict
+
+scala.dict : yuroyoro/vim-scala/dict/scala.dict

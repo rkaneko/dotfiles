@@ -1,0 +1,42 @@
+""" .vimrc.util
+"======================================================
+" utility config for key mappings,editing, searching and so on
+"======================================================
+
+
+" 誤操作すると困るキーを無効化
+" see : http://deris.hatenablog.jp/entry/2013/05/02/192415
+" Invalid keys {{{
+
+   " 保存して閉じる
+   nnoremap ZZ <Nop>
+   " 保存せず閉じる
+   nnoremap ZQ <Nop>
+   " ex mode
+   nnoremap Q <Nop>
+" }}}
+
+
+" Search {{{
+
+   " 検索語の位置を自動で画面の中心にする
+   nnoremap n nzz
+   nnoremap N Nzz
+
+" }}}
+
+
+" unite.vim {{{
+
+   " ,でunite.vimを起動
+   " see : http://mba-hack.blogspot.jp/2013/03/unitevim.html
+   " The prefix key .
+   nnoremap [unite] <Nop>
+   nmap , [unite]
+   nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
+   nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
+   nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
+   nnoremap <silent> [unite]r :<C-u>UniteWithBufferDir file<CR>
+   nnoremap <silent> ,vr :UniteResume<CR>
+
+" }}}
