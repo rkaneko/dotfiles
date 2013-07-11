@@ -34,6 +34,13 @@ Unite
 Vimfiler
 ------------
 
++   `\fe` :
+    _<C-u>VimFilerBufferDir -quit<CR>_ :現在開いているバッファのディレクトリを開く
+
++   `\fi` :
+    _<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>_ :現在開いているバッファのディレクトリをIDEっぽく開く
+
+### Vimfiler開いている時
 +   `e` :
     _e_ :カーソル上のファイルを編集。
 
@@ -70,7 +77,23 @@ Vimfiler
 +   `m` :
     _m_ :マークしたファイルを移動。
 
++   `q` :
+    _Q_ :vimfilerを閉じる(バッファに残らない)。デフォルトのキーマッピングQと入れ替えている。
+
++   `Q` :
+    _q_ :vimfilerを閉じる(バッファに残る)。デフォルトのキーマッピングqと入れ替えている。
+
+
 参考URL : [www.karakaram.com/vimfiler](http://www.karakaram.com/vimfiler)
 
-TODO
-window moving
+
+Window移動
+-----------
+
++   `sh`:
+    _<C-w>h :ひとつ右のウィンドウに移動。
+
++   `sl`:
+    _<C-w>l :ひとつ左のウィンドウに移動。
+
+
