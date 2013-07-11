@@ -26,6 +26,24 @@
 " }}}
 
 
+" Moving window {{{
+
+   " command modeでsキーprefixにしたウィンドウ間移動を行う
+   " <C-w>lなどでウィンドウ間を移動を行うと、自動的にウィンドウ横幅を修正
+   " see : http://vim-users.jp/2009/07/hack42/
+   nnoremap sh <C-w>h <C-w>h:call <SID>good_width()<Cr>
+   nnoremap sl <C-w>l <C-w>l:call <SID>good_width()<Cr>
+   nnoremap sH <C-w>H <C-w>H:call <SID>good_width()<Cr>
+   nnoremap sL <C-w>L <C-w>L:call <SID>good_width()<Cr>
+   function! s:good_width()
+       if winwidth(0) < 84
+           vertical resize 84
+       endif
+   endfunction
+
+" }}}
+
+
 " unite.vim {{{
 
    " ,でunite.vimを起動
@@ -38,5 +56,51 @@
    nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
    nnoremap <silent> [unite]r :<C-u>UniteWithBufferDir file<CR>
    nnoremap <silent> ,vr :UniteResume<CR>
+
+   " unite開いている時のキーマッピング
+   " see : http://www.karakaram.com/vimfiler
+   augroup vimrc
+       autocmd!
+       autocmd FileType unite call s:unite_my_settings()
+   augroup END
+   function! s:unite_my_settings()
+       "ESCでuniteを終了
+       nmap <buffer> <ESC> <Plug>(unite_exit)
+       " sでsplit
+       nnoremap <silent><buffer><expr> s unite#smart_map('s', unite#do_action('split'))
+       inoremap <silent><buffer><expr> s unite#smart_map('s', unite#do_action('split'))
+       " vでvsplit
+       nnoremap <silent><buffer><expr> v unite#smart_map('v', unite#do_action('vsplit'))
+       inoremap <silent><buffer><expr> v unite#smart_map('v', unite#do_action('vsplit'))
+       " fでvimfiler
+       nnoremap <silent><buffer><expr> f unite#smart_map('f', unite#do_action('vimfiler'))
+       inoremap <silent><buffer><expr> f unite#smart_map('f', unite#do_action('vimfiler'))
+   endfunction
+
+" }}}
+
+
+" vimfiler {{{
+
+   " see : http://www.karakaram.com/vimfiler
+   " vimデフォルトのエクスプローラをvimfilerに置き換える
+   let g:vimfiler_as_default_explorer = 1
+   " セーフモードを無効にした状態で起動
+   let g:vimfiler_safe_mode_by_default = 0
+   " 現在開いているバッファのディレクトリを開く
+   nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
+   " 現在開いているバッファをIDE風に開く
+   nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
+
+   " デフォルトのキーマッピングを変更
+   " qキーでvimfilerを閉じる Qキーでvimfilerを隠す
+   augroup vimrc
+       autocmd!
+       autocmd FileType vimfiler call s:vimfiler_my_settings()
+   augroup END
+   function! s:vimfiler_my_settings()
+       nmap <buffer> q <Plug>(vimfiler_exit)
+       nmap <buffer> Q <Plug>(vimfiler_hide)
+   endfunction
 
 " }}}
