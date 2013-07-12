@@ -91,3 +91,14 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
    let g:neosnippet#snippets_directory = $HOME.'/.vim/snippets'
 
 " }}}
+
+
+" XML {{{
+
+   " XMLの閉じタグを自動挿入
+   augroup my_xml 
+       autocmd!
+       autocmd FileType xml inoremap <buffer> </ </<C-x><C-o>
+   augroup END
+
+" }}}
