@@ -2,6 +2,7 @@
 "------------------------------------------------
 " basic config
 "------------------------------------------------
+
 set nobackup                         " not make backup file
 set autoread                         " read automatically file which is written on the other hand
 set noswapfile                       " not make swap file
@@ -37,4 +38,31 @@ set shiftwidth=4                     " auto indent config , indent width is 4 sp
 set softtabstop=4                    " If you types tab key on continuous spaces, you can move 4 spaces .
 set autoindent                       " When you start new line, auto indent is available .
 set smartindent                      " Whew you start new line, vim makes indent judging from line tail .
+
+" paste option
+" see : http://qiita.com/quwa/items/019250dbca167985fe32
+imap <F9> <nop>
+set pastetoggle=<F9>
+
+" key command when insert mode
+" on Ubuntu, <Leader>a and <C-e> are unavailable.
+"inoremap <Leader>a <Home>
+"inoremap <C-e> <End>
+inoremap <C-d> <Del>
+
+" on Ubuntu, <C-h> is backspace. <C-l> unavailable.
+"inoremap <C-h> <Left>
+inoremap <C-b> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+"inoremap <C-l> <Righti>
+inoremap <C-f> <Right>
+
+" when insert mode jj is esc
+inoremap jj <Esc>
+
+" insertモードを抜けるとIMEオフ(この下の二つのコメントを外すとinsesrtモードでカーソルキー移動ができなくなる)
+" Ubuntuで設定が有効にならない。何かプラギンいるのかな？
+"inoremap <silent> <ESC> <ESC>
+"inoremap <silent> <C-[> <ESC>
 

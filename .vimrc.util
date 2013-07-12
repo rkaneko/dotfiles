@@ -33,6 +33,8 @@
    " see : http://vim-users.jp/2009/07/hack42/
    nnoremap sh <C-w>h <C-w>h:call <SID>good_width()<Cr>
    nnoremap sl <C-w>l <C-w>l:call <SID>good_width()<Cr>
+   nnoremap sj <C-w>j
+   nnoremap sk <C-w>k
    nnoremap sH <C-w>H <C-w>H:call <SID>good_width()<Cr>
    nnoremap sL <C-w>L <C-w>L:call <SID>good_width()<Cr>
    function! s:good_width()
@@ -102,5 +104,19 @@
        nmap <buffer> q <Plug>(vimfiler_exit)
        nmap <buffer> Q <Plug>(vimfiler_hide)
    endfunction
+
+" }}}
+
+
+" buffer {{{
+
+   " function keys for buffer
+   " F2 previous buffer
+   map <F2> <ESC>:bp<CR>
+   " F3 next buffer
+   map <F3> <ESC>:bn<CR>
+   " F4 delete buffer
+   map <F4> <ESC>:bnext \| bdelete #<CR>
+   command! Bw :bnext \|bdelete #
 
 " }}}

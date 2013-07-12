@@ -35,10 +35,10 @@ Vimfiler
 ------------
 
 +   `\fe` :
-    _Ctrl+u VimFilerBufferDir -quit_ :現在開いているバッファのディレクトリを開く
+    _Ctrl+u VimFilerBufferDir -quit_ :現在開いているバッファのディレクトリを開く。
 
 +   `\fi` :
-    _Ctrl+u VimFilerBufferDir -split -simple -winwidth=35 -no-quit_ :現在開いているバッファのディレクトリをIDEっぽく開く
+    _Ctrl+u VimFilerBufferDir -split -simple -winwidth=35 -no-quit_ :現在開いているバッファのディレクトリをIDEっぽく開く。
 
 ### Vimfiler開いている時
 +   `e` :
@@ -95,5 +95,45 @@ Window移動
 
 +   `sl`:
     _Ctrl+w l :ひとつ左のウィンドウに移動。
+
+
+Completion
+------------------
+
++   `<C-s>`:
+    _なし :snippet補完開始。
+
+
+Basic
+---------
+
+### insert mode
++   `<C-f>`:
+    _Left :左に移動。
+
++   `<C-b>`:
+    _Right :右に移動。
+
++   `<C-j>`:
+    _Down :下に移動。
+
++   `<C-k>`:
+    _Up :上に移動。
+
++   `jj`:
+    _ESC :insert ,modeを抜ける。
+
+### normal mode
++   `<F2>`:
+    _:bp :ひとつ前のバッファに移動。
+
++   `<F3>`:
+    _:bn :ひとつ次のバッファに移動。
+
++   `<F4>`:
+    _:bd :バッファ消去。
+
++   `<F9>`:
+    _:set pastetoggle :ペーストモード切り替え。F9を押してinsert modeに入ると、insert mode(貼り付け)となる。この状態でペーストするとインデントをつけずにペーストすることができる。
 
 

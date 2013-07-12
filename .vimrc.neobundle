@@ -16,23 +16,30 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Utility {{{
 
- " vimshell
- NeoBundle 'Shougo/vimshell.git'
+  " vimshell
+  NeoBundle 'Shougo/vimshell.git'
 
- " vimproc : execute asynchronously from vim
- NeoBundle 'Shougo/vimproc'
+  " vimproc : execute asynchronously from vim
+  NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin,mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
- " vim-scripts repos
- NeoBundle 'L9'
+  " vim-scripts repos
+  NeoBundle 'L9'
 
- " utility to manage file
- NeoBundle 'Shougo/vimfiler.git'
+  " utility to manage file
+  NeoBundle 'Shougo/vimfiler.git'
 
- " keyword completion system
- NeoBundle 'Shougo/neocomplcache.vim'
+  " keyword completion system
+  NeoBundle 'Shougo/neocomplcache.vim'
 
- " snippet support
- NeoBundle 'Shougo/neosnippet'
+  " snippet support
+  NeoBundle 'Shougo/neosnippet'
 
 " }}}
 
