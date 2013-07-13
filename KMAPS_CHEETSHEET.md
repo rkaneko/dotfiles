@@ -137,3 +137,7 @@ Basic
     _:set pastetoggle :ペーストモード切り替え。F9を押してinsert modeに入ると、insert mode(貼り付け)となる。この状態でペーストするとインデントをつけずにペーストすることができる。
 
 
+Scala
+------
++   `StartSBT`:
+    _なし : VimShellからsbtコンソール起動。
