@@ -32,7 +32,7 @@
             \ 'c' : $HOME.'/.vim/dict/c.dict',
             \ 'cpp' : $HOME.'/.vim/dict/cpp.dict',
             \ 'java' : $HOME.'/.vim/dict/java.dict',
-            \ 'scala' : $HOME.'/.vim/dict/scala.dict',
+            \ 'scala' : [$HOME.'/.vim/dict/scala.dict', $HOME.'/.vim/dict/java.dict'],
             \ 'javascript' : $HOME.'/.vim/dict/javascript.dict',
             \ 'php' : $HOME.'/.vim/dict/php.dict'
             \ }

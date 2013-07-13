@@ -142,7 +142,6 @@ Scala
 +   `StartSBT`:
     _なし : VimShellからsbtコンソール起動。
 
-### VimShellでsbtコンソール開いている状態で
-
+### StartSBTを実行した後でfiletype scala のbuffer画面から
 +   `Space+m`:
-    _なし : sbt compile
+    _なし : sbtコンソール開いているbuffer画面でcompile実行。
