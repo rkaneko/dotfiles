@@ -144,4 +144,4 @@ Scala
 
 ### StartSBTを実行した後でfiletype scala のbuffer画面から
 +   `Space+m`:
-    _なし : sbtコンソール開いているbuffer画面でcompile実行。
+    _なし : ファイルを上書き保存してから、sbtコンソール開いているbuffer画面でcompile実行。
