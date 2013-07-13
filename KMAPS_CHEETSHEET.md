@@ -141,3 +141,8 @@ Scala
 ------
 +   `StartSBT`:
     _なし : VimShellからsbtコンソール起動。
+
+### VimShellでsbtコンソール開いている状態で
+
++   `Space+m`:
+    _なし : sbt compile

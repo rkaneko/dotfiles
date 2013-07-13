@@ -60,9 +60,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Scala {{{
  
  " vim-scala : syntax highlight for scala lang
+ NeoBundle 'derekwyatt/vim-scala'
  " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
- NeoBundleLazy 'derekwyatt/vim-scala',
-     \ { 'autoload' : { 'filetype' : 'scala' } }
+ "NeoBundleLazy 'derekwyatt/vim-scala',
+ "    \ { 'autoload' : { 'filetype' : 'scala' } }
 
  " vim-scala : scala dictionary for vim
  "NeoBundle 'yuroyoro/vim-scala'
