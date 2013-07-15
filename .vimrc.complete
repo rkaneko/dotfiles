@@ -1,4 +1,4 @@
-""" .vimrc.complete
+
 "--------------------------------------------------
 " config for completion
 "--------------------------------------------------
@@ -103,6 +103,12 @@
    augroup my_xml 
        autocmd!
        autocmd FileType xml inoremap <buffer> </ </<C-x><C-o>
+   augroup END
+
+   " xsdの閉じタグを自動挿入
+   augroup my_xsd
+       autocmd!
+       autocmd FileType xsd inoremap <buffer> </ </<C-x><C-o>
    augroup END
 
 " }}}
