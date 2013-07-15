@@ -36,6 +36,8 @@ syntax enable
 "set background=light
 "colorscheme zenburn
 colorscheme mrkn256
+" 背景を半透明に
+"highlight Normal ctermbg=none
 
 " ターミナルタイプによるカラー設定
 if &term =~ "xterm-256color" || "screen-256color"
