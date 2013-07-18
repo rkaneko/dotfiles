@@ -15,11 +15,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Utility {{{
-
-  " vimshell
-  NeoBundle 'Shougo/vimshell.git',
-      \ { 'depends' : 'Shougo/vimproc' }
-
   " vimproc : execute asynchronously from vim
   NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
@@ -30,12 +25,18 @@ NeoBundleFetch 'Shougo/neobundle.vim'
       \    },
       \ }
 
+  " vimshell
+  NeoBundle 'Shougo/vimshell.git'
+  "NeoBundle 'Shougo/vimshell.git',
+  "    \ { 'depends' : 'Shougo/vimproc' }
+  
   " vim-scripts repos
   NeoBundle 'L9'
 
   " utility to manage file
-  NeoBundle 'Shougo/vimfiler.git',
-      \ { 'depends' : 'Shougo/unite.vim' }
+  NeoBundle 'Shougo/vimfiler.git'
+  "NeoBundle 'Shougo/vimfiler.git',
+  "    \ { 'depends' : 'Shougo/unite.vim' }
 
   " keyword completion system
   NeoBundle 'Shougo/neocomplcache.vim'
@@ -60,10 +61,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Scala {{{
  
  " vim-scala : syntax highlight for scala lang
- "NeoBundle 'derekwyatt/vim-scala'
+ NeoBundle 'derekwyatt/vim-scala'
  " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
- NeoBundleLazy 'derekwyatt/vim-scala',
-     \ { 'autoload' : { 'filetype' : 'scala' } }
+ "NeoBundleLazy 'derekwyatt/vim-scala',
+ "    \ { 'autoload' : { 'filetype' : 'scala' } }
 
  " vim-scala : scala dictionary for vim
  "NeoBundle 'yuroyoro/vim-scala'
