@@ -213,3 +213,10 @@
    command! -nargs=0 RemakeXML call <SID>remake_xml()
 
 " }}}
+
+" Scala {{{
+
+   " sort scala import
+   let g:scala_sort_across_groups=1
+
+" }}}
