@@ -32,7 +32,7 @@ highlight PmenuSbar ctermbg=lightcyan
 
 " color scheme
 syntax enable
-"set t_Co=256
+set t_Co=256
 "set background=light
 "colorscheme zenburn
 colorscheme mrkn256
@@ -91,3 +91,9 @@ function! s:GetHighlight(hi)
   let hl = substitute(hl, 'xxx', '', '')
   return hl
 endfunction
+
+
+" vim-airline
+set laststatus=2
+let g:airline_powerline_fonts  = 1
+let g:airline_theme            = 'tomorrow'

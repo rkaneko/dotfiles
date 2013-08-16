@@ -48,26 +48,33 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Unite {{{
  
- " unite.vim : incredible vim plugin implemented with vim script
- NeoBundle 'Shougo/unite.vim'
- NeoBundle 'tsukkee/unite-help'
- NeoBundle 'Shougo/unite-outline'
- NeoBundle 'thinca/vim-unite-history'
- NeoBundle 'tsukkee/unite-tag'
- NeoBundle 'choplin/unite-vim_hacks'
+  " unite.vim : incredible vim plugin implemented with vim script
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'tsukkee/unite-help'
+  NeoBundle 'Shougo/unite-outline'
+  NeoBundle 'thinca/vim-unite-history'
+  NeoBundle 'tsukkee/unite-tag'
+  NeoBundle 'choplin/unite-vim_hacks'
+
+" }}}
+
+" Appearance {{{
+
+  " vim-airline : make cui rich, implemented by Vim Script
+  NeoBundle 'bling/vim-airline'
 
 " }}}
 
 " Scala {{{
  
- " vim-scala : syntax highlight for scala lang
- NeoBundle 'derekwyatt/vim-scala'
- " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
- "NeoBundleLazy 'derekwyatt/vim-scala',
- "    \ { 'autoload' : { 'filetype' : 'scala' } }
+  " vim-scala : syntax highlight for scala lang
+  NeoBundle 'derekwyatt/vim-scala'
+  " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
+  "NeoBundleLazy 'derekwyatt/vim-scala',
+  "    \ { 'autoload' : { 'filetype' : 'scala' } }
 
- " vim-scala : scala dictionary for vim
- "NeoBundle 'yuroyoro/vim-scala'
+  " vim-scala : scala dictionary for vim
+  "NeoBundle 'yuroyoro/vim-scala'
 
 " }}}
 
