@@ -44,8 +44,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " snippet support
   NeoBundle 'Shougo/neosnippet'
 
-  " QFixGrep : QuickFix utility
+  " QFixGrep : QuickFix + grep utility
   NeoBundle 'fuenor/qfixgrep'
+
+  " qfreplace : QuickFix + replace utility
+  NeoBundle 'thinca/vim-qfreplace'
 
 " }}}
 

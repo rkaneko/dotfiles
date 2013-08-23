@@ -142,6 +142,22 @@ Scala
 +   `StartSBT`:
     _なし : VimShellからsbtコンソール起動。
 
++   `SortScalaImport`:
+    _なし : Scalaのimport文をsort。
+
 ### StartSBTを実行した後でfiletype scala のbuffer画面から
 +   `Space+m`:
     _なし : ファイルを上書き保存してから、sbtコンソール開いているbuffer画面でcompile実行。
+
+
+Utility
+--------
++   `:Grep {pattern} {path/to/target}`
+    _なし : QFixGrepによるgrep。grep後QuickFix Windowを開く。  :Grep here_is_method ./src/main/scala/*.scala
+
++   `RGrep {pattern} {path/to/target}`
+    _なし : QFixGrepによる再帰的にgrep。grep後QuickFix Windowを開く。
+
+### QuickFix Windowから
++   `Qfreplace`
+    _なし : QuickFixリストのバッファを開き、その画面上で編集・置換を行うことができる。  例えばQfreplaceバッファ画面で :%s/before/after/gc などで置換を行える。置換後は:wなどで完了する。

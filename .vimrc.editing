@@ -1,0 +1,33 @@
+""" .vimrc.editing
+"-------------------------------------------------
+" config editing (search, replace ...)
+"-------------------------------------------------
+
+" external grep command
+set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
+set grepprg=grep\ -nh
+
+" vimgrep pipe quickfix-window
+autocmd QuickFixCmdPost *grep* cwindow
+
+" qfixgrep {{{
+
+    " see : http://himinato.sblo.jp/category/1597668-1.html
+    " exclude file extension when you use :Grep
+    let MyGrep_ExcludeReg = '[~#]$\|\.dll$\|\.exe$\|\.lnk$\|\.o$\|\.obj$\|\.pdf$\|\.xls$\|\.git$\|\.svn$'
+
+    " not ignore case when you use :Grep
+    let g:MyGrepDefault_Ignorecase = 0
+
+    " see : https://sites.google.com/site/fudist/Home/grep/usage
+    "Grepコマンドのキーマップ
+    let MyGrep_Key  = 'gr'
+    "Grepコマンドの2ストローク目キーマップ
+    "let MyGrep_KeyB = 'gr'
+    " QFixGrepの検索時にカーソル位置の単語を拾う/拾わない
+    let MyGrep_DefaultSearchWord = 0
+    "Quickfixウィンドウの高さ
+    let QFix_Height = 10
+
+" }}}
+

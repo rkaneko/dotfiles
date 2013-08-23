@@ -10,4 +10,4 @@ source ~/dotfiles/.vimrc.complete
 "util config
 source ~/dotfiles/.vimrc.util
 "seach config
-source ~/dotfiles/.vimrc.search
+source ~/dotfiles/.vimrc.editing
