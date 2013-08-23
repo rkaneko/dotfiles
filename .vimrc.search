@@ -14,7 +14,7 @@ set grepprg=grep\ -nh
     let MyGrep_ExcludeReg = '[~#]$\|\.dll$\|\.exe$\|\.lnk$\|\.o$\|\.obj$\|\.pdf$\|\.xls$\|\.git$\|\.svn$'
 
     " ignore case when you use :Grep
-    let g:MyGrepDefault_Ignorecase = 1
+    "let g:MyGrepDefault_Ignorecase = 1
 
 " }}}
 
