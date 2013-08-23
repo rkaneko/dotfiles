@@ -1,0 +1,20 @@
+""" .vimrc.search
+"-------------------------------------------------
+" config search 
+"-------------------------------------------------
+
+" external grep command
+set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
+set grepprg=grep\ -nh
+
+" qfixgrep {{{
+
+    " see : http://himinato.sblo.jp/category/1597668-1.html
+    " exclude file extension when you use :Grep
+    let MyGrep_ExcludeReg = '[~#]$\|\.dll$\|\.exe$\|\.lnk$\|\.o$\|\.obj$\|\.pdf$\|\.xls$\|\.git$\|\.svn$'
+
+    " ignore case when you use :Grep
+    let g:MyGrepDefault_Ignorecase = 1
+
+" }}}
+

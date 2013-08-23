@@ -44,6 +44,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " snippet support
   NeoBundle 'Shougo/neosnippet'
 
+  " QFixGrep : QuickFix utility
+  NeoBundle 'fuenor/qfixgrep'
+
 " }}}
 
 " Unite {{{

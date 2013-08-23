@@ -7,5 +7,7 @@ source ~/dotfiles/.vimrc.basic
 source ~/dotfiles/.vimrc.appearance
 "completion config
 source ~/dotfiles/.vimrc.complete
-"uitl config
+"util config
 source ~/dotfiles/.vimrc.util
+"seach config
+source ~/dotfiles/.vimrc.search
