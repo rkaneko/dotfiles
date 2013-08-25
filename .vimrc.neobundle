@@ -44,6 +44,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " snippet support
   NeoBundle 'Shougo/neosnippet'
 
+  " caw.vim : utility for handling comment
+  NeoBundle 'tyru/caw.vim'
+
   " QFixGrep : QuickFix + grep utility
   NeoBundle 'fuenor/qfixgrep'
 
