@@ -32,7 +32,9 @@ highlight PmenuSbar ctermbg=lightcyan
 
 " color scheme
 syntax enable
-set t_Co=256
+if !has('gui_running')
+    set t_Co=256
+endif
 "set background=light
 "colorscheme zenburn
 colorscheme mrkn256
