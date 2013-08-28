@@ -70,7 +70,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Appearance {{{
 
   " vim-airline : make cui rich, implemented by Vim Script
-  "NeoBundle 'bling/vim-airline'
+"   NeoBundle 'bling/vim-airline'
 
   " lightline.vim : A light and configurable statusline for Vim
   NeoBundle 'itchyny/lightline.vim'

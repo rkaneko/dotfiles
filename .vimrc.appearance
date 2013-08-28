@@ -94,13 +94,15 @@ endif
 
 
 " vim-airline
-"set laststatus=2
-"let g:airline_powerline_fonts  = 1
-"let g:airline_theme            = 'tomorrow'
+" set laststatus=2
+" let g:airline_powerline_fonts  = 1
+" let g:airline_theme            = 'tomorrow'
 
 " lightline.vim {{{
 
     " see : https://github.com/itchyny/lightline.vim
+    set laststatus=2
+
     let g:lightline = {
                 \ 'colorscheme': 'landscape',
                 \ 'mode_map': { 'c': 'NORMAL' },
