@@ -8,215 +8,216 @@
 " see : http://deris.hatenablog.jp/entry/2013/05/02/192415
 " Invalid keys {{{
 
-   " 保存して閉じる
-   nnoremap ZZ <Nop>
-   " 保存せず閉じる
-   nnoremap ZQ <Nop>
-   " ex mode
-   nnoremap Q <Nop>
+    " 保存して閉じる
+    nnoremap ZZ <Nop>
+    " 保存せず閉じる
+    nnoremap ZQ <Nop>
+    " ex mode
+    nnoremap Q <Nop>
 " }}}
 
 
 " Search {{{
 
-   " 検索語の位置を自動で画面の中心にする
-   nnoremap n nzz
-   nnoremap N Nzz
+    " 検索語の位置を自動で画面の中心にする
+    nnoremap n nzz
+    nnoremap N Nzz
 
 " }}}
 
 
 " Moving window {{{
 
-   " command modeでsキーprefixにしたウィンドウ間移動を行う
-   " <C-w>lなどでウィンドウ間を移動を行うと、自動的にウィンドウ横幅を修正
-   " see : http://vim-users.jp/2009/07/hack42/
-   nnoremap sh <C-w>h <C-w>h:call <SID>good_width()<Cr>
-   nnoremap sl <C-w>l <C-w>l:call <SID>good_width()<Cr>
-   nnoremap sj <C-w>j
-   nnoremap sk <C-w>k
-   nnoremap sH <C-w>H <C-w>H:call <SID>good_width()<Cr>
-   nnoremap sL <C-w>L <C-w>L:call <SID>good_width()<Cr>
-   function! s:good_width()
-       if winwidth(0) < 84
-           vertical resize 84
-       endif
-   endfunction
+    " command modeでsキーprefixにしたウィンドウ間移動を行う
+    " <C-w>lなどでウィンドウ間を移動を行うと、自動的にウィンドウ横幅を修正
+    " see : http://vim-users.jp/2009/07/hack42/
+    nnoremap sh <C-w>h <C-w>h:call <SID>good_width()<Cr>
+    nnoremap sl <C-w>l <C-w>l:call <SID>good_width()<Cr>
+    nnoremap sj <C-w>j
+    nnoremap sk <C-w>k
+    nnoremap sH <C-w>H <C-w>H:call <SID>good_width()<Cr>
+    nnoremap sL <C-w>L <C-w>L:call <SID>good_width()<Cr>
+    function! s:good_width()
+        if winwidth(0) < 84
+            vertical resize 84
+        endif
+    endfunction
 
 " }}}
 
 
 " unite.vim {{{
 
-   " ,でunite.vimを起動
-   " see : http://mba-hack.blogspot.jp/2013/03/unitevim.html
-   " The prefix key .
-   nnoremap [unite] <Nop>
-   nmap , [unite]
-   nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
-   nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
-   nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
-   nnoremap <silent> [unite]r :<C-u>UniteWithBufferDir file<CR>
-   nnoremap <silent> ,vr :UniteResume<CR>
+    " ,でunite.vimを起動
+    " see : http://mba-hack.blogspot.jp/2013/03/unitevim.html
+    " The prefix key .
+    nnoremap [unite] <Nop>
+    nmap , [unite]
+    nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
+    nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
+    nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
+    nnoremap <silent> [unite]r :<C-u>UniteWithBufferDir file<CR>
+    nnoremap <silent> ,vr :UniteResume<CR>
 
-   " unite開いている時のキーマッピング
-   " see : http://www.karakaram.com/vimfiler
-   augroup vimrc
-       autocmd!
-       autocmd FileType unite call s:unite_my_settings()
-   augroup END
-   function! s:unite_my_settings()
-       "ESCでuniteを終了
-       nmap <buffer> <ESC> <Plug>(unite_exit)
-       " sでsplit
-       nnoremap <silent><buffer><expr> s unite#smart_map('s', unite#do_action('split'))
-       inoremap <silent><buffer><expr> s unite#smart_map('s', unite#do_action('split'))
-       " vでvsplit
-       nnoremap <silent><buffer><expr> v unite#smart_map('v', unite#do_action('vsplit'))
-       inoremap <silent><buffer><expr> v unite#smart_map('v', unite#do_action('vsplit'))
-       " fでvimfiler
-       nnoremap <silent><buffer><expr> f unite#smart_map('f', unite#do_action('vimfiler'))
-       inoremap <silent><buffer><expr> f unite#smart_map('f', unite#do_action('vimfiler'))
-   endfunction
+    " unite開いている時のキーマッピング
+    " see : http://www.karakaram.com/vimfiler
+    augroup vimrc
+        autocmd!
+        autocmd FileType unite call s:unite_my_settings()
+    augroup END
+    function! s:unite_my_settings()
+        "ESCでuniteを終了
+        nmap <buffer> <ESC> <Plug>(unite_exit)
+        " sでsplit
+        nnoremap <silent><buffer><expr> s unite#smart_map('s', unite#do_action('split'))
+        inoremap <silent><buffer><expr> s unite#smart_map('s', unite#do_action('split'))
+        " vでvsplit
+        nnoremap <silent><buffer><expr> v unite#smart_map('v', unite#do_action('vsplit'))
+        inoremap <silent><buffer><expr> v unite#smart_map('v', unite#do_action('vsplit'))
+        " fでvimfiler
+        nnoremap <silent><buffer><expr> f unite#smart_map('f', unite#do_action('vimfiler'))
+        inoremap <silent><buffer><expr> f unite#smart_map('f', unite#do_action('vimfiler'))
+    endfunction
 
 " }}}
 
 
 " vimfiler {{{
 
-   " see : http://www.karakaram.com/vimfiler
-   " vimデフォルトのエクスプローラをvimfilerに置き換える
-   let g:vimfiler_as_default_explorer = 1
-   " セーフモードを無効にした状態で起動
-   let g:vimfiler_safe_mode_by_default = 0
-   " 現在開いているバッファのディレクトリを開く
-   nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
-   " 現在開いているバッファをIDE風に開く
-   nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
+    " see : http://www.karakaram.com/vimfiler
+    " vimデフォルトのエクスプローラをvimfilerに置き換える
+    let g:vimfiler_as_default_explorer = 1
+    " セーフモードを無効にした状態で起動
+    let g:vimfiler_safe_mode_by_default = 0
+    " 現在開いているバッファのディレクトリを開く
+    nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
+    " 現在開いているバッファをIDE風に開く
+    nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
 
-   " デフォルトのキーマッピングを変更
-   " qキーでvimfilerを閉じる Qキーでvimfilerを隠す
-   augroup vimrc
-       autocmd!
-       autocmd FileType vimfiler call s:vimfiler_my_settings()
-   augroup END
-   function! s:vimfiler_my_settings()
-       nmap <buffer> q <Plug>(vimfiler_exit)
-       nmap <buffer> Q <Plug>(vimfiler_hide)
-   endfunction
+    " デフォルトのキーマッピングを変更
+    " qキーでvimfilerを閉じる Qキーでvimfilerを隠す
+    augroup vimrc
+        autocmd!
+        autocmd FileType vimfiler call s:vimfiler_my_settings()
+    augroup END
+    function! s:vimfiler_my_settings()
+        nmap <buffer> q <Plug>(vimfiler_exit)
+        nmap <buffer> Q <Plug>(vimfiler_hide)
+    endfunction
 
 " }}}
 
 
 " buffer {{{
 
-   " function keys for buffer
-   " F2 previous buffer
-   map <F2> <ESC>:bp<CR>
-   " F3 next buffer
-   map <F3> <ESC>:bn<CR>
-   " F4 delete buffer
-   map <F4> <ESC>:bnext \| bdelete #<CR>
-   command! Bw :bnext \|bdelete #
+    " function keys for buffer
+    " F2 previous buffer
+    map <F2> <ESC>:bp<CR>
+    " F3 next buffer
+    map <F3> <ESC>:bn<CR>
+    " F4 delete buffer
+    map <F4> <ESC>:bnext \| bdelete #<CR>
+    command! Bw :bnext \|bdelete #
 
 " }}}
 
 
 " vimshell {{{
 
-   " for sbt
-   function! s:start_sbt()
-       if !has_key(t:, 'sbt_cmds')
-           "let t:sbt_cmds = [input('t:sbt_cmds[0] = ')]
-           let t:sbt_cmds = ['compile']
-           echo "let t:sbt_cmd = 'compile'"
-       endif
-       execute 'VimShellInteractive sbt'
-       stopinsert
-       let t:sbt_bufname = bufname('%')
-       wincmd H
-       wincmd p
-   endfunction
+    " for sbt
+    function! s:start_sbt()
+        if !has_key(t:, 'sbt_cmds')
+            "let t:sbt_cmds = [input('t:sbt_cmds[0] = ')]
+            let t:sbt_cmds = ['compile']
+            echo "let t:sbt_cmd = 'compile'"
+        endif
+        execute 'VimShellInteractive sbt'
+        stopinsert
+        let t:sbt_bufname = bufname('%')
+        wincmd H
+        wincmd p
+    endfunction
 
-   command! -nargs=0 StartSBT call <SID>start_sbt()
+    command! -nargs=0 StartSBT call <SID>start_sbt()
 
-   function! s:sbt_run()
-       if !has_key(t:, 'sbt_cmds')
-           echoerr 'please give t:sbt_cmds a list'
-           return
-       endif
+    function! s:sbt_run()
+        if !has_key(t:, 'sbt_cmds')
+            echoerr 'please give t:sbt_cmds a list'
+            return
+        endif
 
-       let sbt_bufname = get(t:, 'sbt_bufname')
-       if sbt_bufname !=# ''
-           " go to the window
-           let wn = bufwinnr(sbt_bufname)
-           execute wn . 'wincmd w'
-           " whew
-           normal! Gzt
-           " go back to the previous window
-           wincmd p
+        let sbt_bufname = get(t:, 'sbt_bufname')
+        if sbt_bufname !=# ''
+            " go to the window
+            let wn = bufwinnr(sbt_bufname)
+            execute wn . 'wincmd w'
+            " whew
+            normal! Gzt
+            " go back to the previous window
+            wincmd p
 
-           call vimshell#interactive#set_send_buffer(sbt_bufname)
-           call vimshell#interactive#send(t:sbt_cmds)
-           " explosion
-           "call vimproc#system_bg('curl -s http://localhost:8080/requests/status.xml?command=pl_play')
-       else
-           echoerr 'try StartSBT'
-       endif
-   endfunction
+            call vimshell#interactive#set_send_buffer(sbt_bufname)
+            call vimshell#interactive#send(t:sbt_cmds)
+            " explosion
+            "call vimproc#system_bg('curl -s http://localhost:8080/requests/status.xml?command=pl_play')
+        else
+            echoerr 'try StartSBT'
+        endif
+    endfunction
 
-   function! s:vimrc_scala()
-       nnoremap <buffer> <Space>m :<C-u>write<Cr>:call <SID>sbt_run()<Cr>
-       nnoremap <buffer> <Space>st :<C-u>StartSBT
-   endfunction
+    function! s:vimrc_scala()
+        nnoremap <buffer> <Space>m :<C-u>write<Cr>:call <SID>sbt_run()<Cr>
+        nnoremap <buffer> <Space>st :<C-u>StartSBT
+        nnoremap <buffer> <Space>vsi :<C-u>VimShellInteractive --split='below split \| resize 12' scala<Cr>
+    endfunction
 
-   augroup vimrc_scala
-       autocmd!
-       autocmd FileType scala call s:vimrc_scala()
-   augroup END 
+    augroup vimrc_scala
+        autocmd!
+        autocmd FileType scala call s:vimrc_scala()
+    augroup END 
    
 " }}}
 
 " iexe-sbt {{{
    
-   function! s:vimrc_int_sbt()
-       syn match intsbtInfo '^\[info\]'
-       syn match intsbtError '^\[error\]'
-       syn match intsbtSuccess '^\[success\] .*'
-       syn match intsbtPrompt '^> '
-       hi def link intsbtInfo LineNr
-       hi def link intsbtError ErrorMsg
-       hi def link intsbtSuccess LineNr
-       hi def link intsbtPrompt vimshellUserPrompt
-   endfunction
+    function! s:vimrc_int_sbt()
+        syn match intsbtInfo '^\[info\]'
+        syn match intsbtError '^\[error\]'
+        syn match intsbtSuccess '^\[success\] .*'
+        syn match intsbtPrompt '^> '
+        hi def link intsbtInfo LineNr
+        hi def link intsbtError ErrorMsg
+        hi def link intsbtSuccess LineNr
+        hi def link intsbtPrompt vimshellUserPrompt
+    endfunction
 
-   augroup vimrc-int-sbt
-       autocmd!
-       autocmd FileType int-sbt call <SID>vimrc_int_sbt()
-   augroup END
+    augroup vimrc-int-sbt
+        autocmd!
+        autocmd FileType int-sbt call <SID>vimrc_int_sbt()
+    augroup END
 
 " }}}
 
 " xml {{{
 
-   " windowsで編集したxmlがUnixで変な風に表示されたら、整形できるかもしれない関数
-   " see : http://www.kaoriya.net/blog/2012/02/09/
-   function! s:remake_xml()
-       set ft=xml
-       %s/></>\r</ge
-       %s/>\(\S\)/>\r\1/ge
-       %s/\(\S\)</\1\r</ge
-       %s/\r//ge
-       :normal gg=G
-   endfunction
+    " windowsで編集したxmlがUnixで変な風に表示されたら、整形できるかもしれない関数
+    " see : http://www.kaoriya.net/blog/2012/02/09/
+    function! s:remake_xml()
+        set ft=xml
+        %s/></>\r</ge
+        %s/>\(\S\)/>\r\1/ge
+        %s/\(\S\)</\1\r</ge
+        %s/\r//ge
+        :normal gg=G
+    endfunction
 
-   command! -nargs=0 RemakeXML call <SID>remake_xml()
+    command! -nargs=0 RemakeXML call <SID>remake_xml()
 
 " }}}
 
 " Scala {{{
 
-   " sort scala import
-   let g:scala_sort_across_groups=1
+    " sort scala import
+    let g:scala_sort_across_groups=1
 
 " }}}

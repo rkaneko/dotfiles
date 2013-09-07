@@ -139,8 +139,10 @@ Basic
 
 Scala
 ------
-+   `StartSBT`:
-    _なし : VimShellからsbtコンソール起動。
++   `Space+st`:
+    _StartSBT : VimShellからsbtコンソール起動。
++   `Space+vsi`:
+    _VimShellInteractive --split='below split | resize 12' scala : Scala REPLを起動。
 
 +   `SortScalaImport`:
     _なし : Scalaのimport文をsort。
