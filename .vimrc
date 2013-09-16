@@ -9,5 +9,5 @@ source ~/dotfiles/.vimrc.appearance
 source ~/dotfiles/.vimrc.complete
 "util config
 source ~/dotfiles/.vimrc.util
-"seach config
+"editing config
 source ~/dotfiles/.vimrc.editing
