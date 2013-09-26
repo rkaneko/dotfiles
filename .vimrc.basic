@@ -19,8 +19,11 @@ set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
 
-set clipboard=unnamed                " put yanked letters into clipboard
-imap <C-p> <ESC>"*pa                 " On insert mode, you can put clipped letters with Ctrl+k
+" set clipboard=unnamed                " put yanked letters into clipboard
+imap <C-p> <ESC>"*pa                 " On insert mode, you can put clipped letters with Ctrl+p
+
+" see : http://atasatamatara.hatenablog.jp/entry/2013/03/07/215806
+vmap <C-c> :w !xsel -ib<CR><CR>      " copy text with Ctrl+c
 
 " Ev/Rv : edit/reflect .vimrc
 command! Ev edit $MYVIMRC

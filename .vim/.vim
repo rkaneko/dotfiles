@@ -1,0 +1,1 @@
+/home/rkaneko/dotfiles/.vim
