@@ -7,7 +7,7 @@ set showmatch            " 括弧の対応をハイライト
 set number               " show line number
 "set list                 " 不可視文字表示
 
-" ref : http://goo.gl/dToJC
+" see : http://goo.gl/dToJC
 " show line tail space
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
 au BufWinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')

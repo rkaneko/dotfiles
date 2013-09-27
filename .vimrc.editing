@@ -3,6 +3,15 @@
 " config editing (search, replace ...)
 "-------------------------------------------------
 
+" Search {{{
+
+    " 検索語の位置を自動で画面の中心にする
+    nnoremap n nzz
+    nnoremap N Nzz
+
+" }}}
+
+
 " external grep command
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh

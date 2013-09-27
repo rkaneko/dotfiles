@@ -17,13 +17,7 @@
 " }}}
 
 
-" Search {{{
 
-    " 検索語の位置を自動で画面の中心にする
-    nnoremap n nzz
-    nnoremap N Nzz
-
-" }}}
 
 
 " Moving window {{{
@@ -57,6 +51,7 @@
     nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
     nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
     nnoremap <silent> [unite]r :<C-u>UniteWithBufferDir file<CR>
+    nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
     nnoremap <silent> ,vr :UniteResume<CR>
 
     " unite開いている時のキーマッピング
@@ -131,11 +126,11 @@
             let t:sbt_cmds = ['compile']
             echo "let t:sbt_cmd = 'compile'"
         endif
-        execute 'VimShellInteractive sbt'
+        execute "VimShellInteractive --split='below split \| resize 12' sbt"
         stopinsert
         let t:sbt_bufname = bufname('%')
-        wincmd H
-        wincmd p
+"         wincmd J
+"         wincmd p
     endfunction
 
     command! -nargs=0 StartSBT call <SID>start_sbt()

@@ -20,6 +20,9 @@ Unite
 +   `,f` :
     _:Unite buffer_ :バッファリストを開く。
 
++   `,o` :
+    _:Unite outline_ :unite-outline起動。メソッドなどを一覧表示する。
+
 ### Unite開いている時
 +   `s` :
     _:split_ :画面を横分割。
