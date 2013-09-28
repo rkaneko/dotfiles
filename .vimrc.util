@@ -119,6 +119,9 @@
 
 " vimshell {{{
 
+    " vimshell split option
+    let g:vimshell_split_command = 'below split'
+
     " for sbt
     function! s:start_sbt()
         if !has_key(t:, 'sbt_cmds')
