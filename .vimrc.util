@@ -1,6 +1,6 @@
 """ .vimrc.util
 "======================================================
-" utility config for key mappings,editing, searching and so on
+" config for moving(cursor, window), utiltity plugins searching and so on
 "======================================================
 
 
@@ -16,7 +16,12 @@
     nnoremap Q <Nop>
 " }}}
 
+" Moving cursor {{{
 
+    " moving last line's tail
+    nnoremap EE G $
+
+" }}}
 
 
 
@@ -172,12 +177,12 @@
     augroup vimrc_scala
         autocmd!
         autocmd FileType scala call s:vimrc_scala()
-    augroup END 
-   
+    augroup END
+
 " }}}
 
 " iexe-sbt {{{
-   
+
     function! s:vimrc_int_sbt()
         syn match intsbtInfo '^\[info\]'
         syn match intsbtError '^\[error\]'

@@ -89,8 +89,12 @@ inoremap <C-f> <Right>
 " when insert mode jj is esc
 inoremap jj <Esc>
 
+" 保存時に行末の空白を除去する
+autocmd BufWritePre * :%s/\s\+$//ge
+" 保存時にtabをスペースに変換する
+autocmd BufWritePre * :%s/\t/  /ge
+
 " insertモードを抜けるとIMEオフ(この下の二つのコメントを外すとinsesrtモードでカーソルキー移動ができなくなる)
 " Ubuntuで設定が有効にならない。何かプラギンいるのかな？
 "inoremap <silent> <ESC> <ESC>
 "inoremap <silent> <C-[> <ESC>
-
