@@ -50,7 +50,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 " I/O buffer {{{
 
     imap <C-b> <ESC>:read ~/.vim/bf<CR>i
-    nmap <C-b> :read ~/.vim/bf<CR>
+"     nmap <C-b> :read ~/.vim/bf<CR>
     vmap <C-b> :w!~/.vim/bf<CR>
 
 " }}}

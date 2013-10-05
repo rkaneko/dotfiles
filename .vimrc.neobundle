@@ -39,7 +39,17 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   "    \ { 'depends' : 'Shougo/unite.vim' }
 
   " keyword completion system
-  NeoBundle 'Shougo/neocomplcache.vim'
+  function! s:meet_neocomplete_requirements()
+      return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
+  endfunction
+
+  if s:meet_neocomplete_requirements()
+      NeoBundle 'Shougo/neocomplete.vim'
+      NeoBundleFetch 'Shougo/neocomplcache.vim'
+  else
+      NeoBundleFetch 'Shougo/neocomplete.vim'
+      NeoBundle 'Shougo/neocomplcache.vim'
+  endif
 
   " snippet support
   NeoBundle 'Shougo/neosnippet'
@@ -87,10 +97,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Scala {{{
 
   " vim-scala : syntax highlight for scala lang
-  NeoBundle 'derekwyatt/vim-scala'
+"   NeoBundle 'derekwyatt/vim-scala'
   " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
-  "NeoBundleLazy 'derekwyatt/vim-scala',
-  "    \ { 'autoload' : { 'filetype' : 'scala' } }
+  NeoBundleLazy 'derekwyatt/vim-scala',
+      \ { 'autoload' : { 'filetypes' : ['scala'] } }
 
   " vim-scala : scala dictionary for vim
   "NeoBundle 'yuroyoro/vim-scala'
