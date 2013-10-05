@@ -9,6 +9,7 @@ set noswapfile                       " not make swap file
 set textwidth=0                      " not turn up long sentence
 set hidden                           " can open a file editting on the other hand
 set backspace=indent,eol,start       " remove all with backspace key
+set whichwrap=b,s,[,],<.>,~          " moving as screen editor
 set showcmd                          " show command on the status line
 set showmode                         " show current mode
 
