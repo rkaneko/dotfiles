@@ -29,7 +29,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Shougo/vimshell.git'
   "NeoBundle 'Shougo/vimshell.git',
   "    \ { 'depends' : 'Shougo/vimproc' }
-  
+
   " vim-scripts repos
   NeoBundle 'L9'
 
@@ -56,7 +56,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " }}}
 
 " Unite {{{
- 
+
   " unite.vim : incredible vim plugin implemented with vim script
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'tsukkee/unite-help'
@@ -77,8 +77,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " }}}
 
+" Git {{{
+
+    " fugitive.vim : Git wrapper
+    NeoBundle 'tpope/vim-fugitive'
+
+" }}}
+
 " Scala {{{
- 
+
   " vim-scala : syntax highlight for scala lang
   NeoBundle 'derekwyatt/vim-scala'
   " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
