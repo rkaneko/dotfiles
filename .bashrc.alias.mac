@@ -1,3 +1,14 @@
+# .bashrc.alaia.mac
+# @desc bash alias for Mac
+
+# include common alias
+if [ -f ./.bashrc.alias ]; then
+. ./.bashrc.alias
+fi
+
+alias ll='ls -lF'
+alias la='ls -alF'
+
 # tex
 alias dvipdfmx='/usr/texbin/dvipdfmx'
 alias platex='/usr/texbin/platex'

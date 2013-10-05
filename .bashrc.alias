@@ -1,12 +1,9 @@
-alias ll='ls -l'
-alias la='ls -a'
+# .bashrc.alias
+# @desc common bash alias
 
 # vim short cut
 alias vi='vim'
 alias v='vim'
-
-# emacs short cut
-alias e='emacs'
 
 # utility short cut
 alias up='cd ..'

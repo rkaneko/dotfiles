@@ -1,16 +1,7 @@
-# vim short cut
-alias vi='vim'
-alias v='vim'
+# .bashrc.alias.ubuntu
+# @desc bash alias for Ubuntu
 
-# utility short cut
-alias up='cd ..'
-alias upp='cd ../../'
-alias uppp='cd ../../../'
-
-# original command rgrep see: http://d.hatena.ne.jp/shunsuk/20120629/1340925330
-alias rgrep='find . -name "*.git*" -prune -o -type f -print0 | xargs -0 grep'
-
-# write date into buffer file
-alias bf='cat > ~/.vim/bf'
-# take data from buffer file
-alias bfcat='cat ~/.vim/bf'
+# include common alias
+if [ -f ./.bashrc.alias ]; then
+. ./.bashrc.alias
+fi
