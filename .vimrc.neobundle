@@ -107,4 +107,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " }}}
 
+" Cpp {{{
+
+    " vim-altr : Switch to the missing file without interaction
+    NeoBundleLazy 'kana/vim-altr',
+        \ { 'autoload' : { 'filetypes' : ['cpp'] } }
+
+" }}}
+
 filetype plugin indent on
