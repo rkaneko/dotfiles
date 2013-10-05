@@ -9,7 +9,7 @@ set noswapfile                       " not make swap file
 set textwidth=0                      " not turn up long sentence
 set hidden                           " can open a file editting on the other hand
 set backspace=indent,eol,start       " remove all with backspace key
-set whichwrap=b,s,[,],<.>,~          " moving as screen editor
+set whichwrap=b,s,[,],<,>,~          " moving as screen editor
 set showcmd                          " show command on the status line
 set showmode                         " show current mode
 
@@ -37,7 +37,7 @@ set helpfile=$VIMRUNTIME/doc/help.txt
 filetype plugin on                   " set on judging file type
 
 "" tab and indent
-" ref : http://goo.gl/fHiE7 
+" ref : http://goo.gl/fHiE7
 set expandtab                        " If you types tab key, vim replaces tab with spaces .
 set tabstop=4                        " tab is 4 spaces on vim view
 set shiftwidth=4                     " auto indent config , indent width is 4 spaces
