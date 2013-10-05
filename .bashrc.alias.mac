@@ -1,0 +1,3 @@
+# tex
+alias dvipdfmx='/usr/texbin/dvipdfmx'
+alias platex='/usr/texbin/platex'

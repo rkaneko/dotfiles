@@ -80,12 +80,12 @@ endif
 inoremap <C-d> <Del>
 
 " on Ubuntu, <C-h> is backspace. <C-l> unavailable.
-"inoremap <C-h> <Left>
-inoremap <C-b> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-"inoremap <C-l> <Righti>
-inoremap <C-f> <Right>
+" "inoremap <C-h> <Left>
+" inoremap <C-b> <Left>
+" inoremap <C-j> <Down>
+" inoremap <C-k> <Up>
+" "inoremap <C-l> <Righti>
+" inoremap <C-f> <Right>
 
 " when insert mode jj is esc
 inoremap jj <Esc>
