@@ -7,7 +7,7 @@ if [ -f ./.bashrc.alias ]; then
 fi
 
 alias ll='ls -lF'
-alias la='ls -alF'
+alias la='ls -alh'
 
 # tex
 alias dvipdfmx='/usr/texbin/dvipdfmx'

@@ -154,6 +154,11 @@ Scala
 +   `Space+m`:
     _なし : ファイルを上書き保存してから、sbtコンソール開いているbuffer画面でcompile実行。
 
+C++
+---
++   `Space+a`:
+    _altr forward : hppファイルとcppファイルを入れ替えるToggle。
+
 
 Utility
 --------
