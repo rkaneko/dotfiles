@@ -13,7 +13,7 @@ inoremap { {}<LEFT>
 "inoremap ' ''<LEFT>
 
 
-" see : Shougo/neocomlcache.vim
+" see : Shougo/{neocomlete.vim/neocomlcache.vim}
 " Neocomplete or Neocomplcache {{{
 
     function! s:meet_neocomplete_requirements()
@@ -29,16 +29,16 @@ inoremap { {}<LEFT>
         " Use smartcase.
         let g:neocomplete#enable_smart_case = 1
         " Set minimum syntax keyword length.
-        let g:neocomplete#min_syntax_length = 3
+        let g:neocomplete#sources#syntax#min_keyword_length = 3
         let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
         " Define dictionary.
-        let g:neocomplete#dictionary_filetype_lists = {
+        let g:neocomplete#sources#dictionary#dictionaries = {
                     \ 'default' : '',
                     \ 'c' : $HOME.'/.vim/dict/c.dict',
                     \ 'cpp' : $HOME.'/.vim/dict/cpp.dict',
                     \ 'java' : $HOME.'/.vim/dict/java.dict',
-                    \ 'scala' : [$HOME.'/.vim/dict/scala.dict', $HOME.'/.vim/dict/java.dict'],
+                    \ 'scala' : $HOME.'/.vim/dict/scala.dict',
                     \ 'javascript' : $HOME.'/.vim/dict/javascript.dict',
                     \ 'php' : $HOME.'/.vim/dict/php.dict'
                     \ }
@@ -86,7 +86,7 @@ inoremap { {}<LEFT>
                     \ 'c' : $HOME.'/.vim/dict/c.dict',
                     \ 'cpp' : $HOME.'/.vim/dict/cpp.dict',
                     \ 'java' : $HOME.'/.vim/dict/java.dict',
-                    \ 'scala' : [$HOME.'/.vim/dict/scala.dict', $HOME.'/.vim/dict/java.dict'],
+                    \ 'scala' : $HOME.'/.vim/dict/scala.dict',
                     \ 'javascript' : $HOME.'/.vim/dict/javascript.dict',
                     \ 'php' : $HOME.'/.vim/dict/php.dict'
                     \ }
@@ -119,12 +119,14 @@ inoremap { {}<LEFT>
 
     endif
 
-   " Enable omni completion.
-   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    " Enable omni completion.
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+"     autocmd FileType scala  :set dictionary=$HOME/.vim/dict/scala.dict
 
 " }}}
 
