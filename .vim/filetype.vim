@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.ssp setf ssp.html
+au BufNewFile,BufRead *.ssp setf ssp.html
