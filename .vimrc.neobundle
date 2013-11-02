@@ -54,6 +54,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " snippet support
   NeoBundle 'Shougo/neosnippet'
 
+  " Easy and high speed coding method
+  NeoBundle 'mattn/sonictemplate-vim'
+
   " caw.vim : utility for handling comment
   NeoBundle 'tyru/caw.vim'
 
