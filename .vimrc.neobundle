@@ -118,4 +118,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " }}}
 
+" groovy {{{
+
+    " groovy files for Vim
+    NeoBundleLazy 'mwaisgold/groovy-vim-files',
+        \ { 'autoload' : { 'filetypes' : ['groovy'] } }
+
+" }}}
+
 filetype plugin indent on
