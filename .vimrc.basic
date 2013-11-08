@@ -14,7 +14,7 @@ set showcmd                          " show command on the status line
 set showmode                         " show current mode
 
 
-set clipboard+=unnamed               " use OS clipboard
+set clipboard+=unnamed,autoselect    " use OS clipboard
 " use mouse on Terminal
 set mouse=a
 set guioptions+=a
@@ -34,7 +34,6 @@ command! Rv source $MYVIMRC
 
 set helpfile=$VIMRUNTIME/doc/help.txt
 
-filetype plugin on                   " set on judging file type
 
 "" tab and indent
 " ref : http://goo.gl/fHiE7
