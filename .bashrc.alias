@@ -19,4 +19,4 @@ alias bf='cat > ~/.vim/bf'
 alias bfcat='cat ~/.vim/bf'
 
 # show groud list
-alias listgroup='cut -d: f1 /etc/group'
+alias listgroup='cut -d: -f1 /etc/group'
