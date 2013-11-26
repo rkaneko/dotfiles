@@ -20,3 +20,6 @@ alias bfcat='cat ~/.vim/bf'
 
 # show groud list
 alias listgroup='cut -d: -f1 /etc/group'
+
+# show user list
+alias listusers='cut -d: -f1 /etc/passwd'
