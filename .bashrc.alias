@@ -17,3 +17,6 @@ alias rgrep='find . -name "*.git*" -prune -o -type f -print0 | xargs -0 grep'
 alias bf='cat > ~/.vim/bf'
 # take data from buffer file
 alias bfcat='cat ~/.vim/bf'
+
+# show groud list
+alias listgroup='cut -d: f1 /etc/group'
