@@ -124,7 +124,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " groovy {{{
 
     " groovy files for Vim
-    NeoBundleLazy 'mwaisgold/groovy-vim-files',
+"     NeoBundleLazy 'mwaisgold/groovy-vim-files',
+    NeoBundleLazy 'rkaneko/groovy.vim',
         \ { 'autoload' : { 'filetypes' : ['groovy'] } }
 
 " }}}
