@@ -45,6 +45,20 @@
 " }}}
 
 
+" openbrowser.vim {{{
+
+    let g:netrw_nogx = 1 " disable netrw's gx mapping.
+    nmap gx <Plug>(openbrowser-smart-search)
+    vmap gx <Plug>(openbrowser-smart-search)
+
+    " If it looks like URI, Open URI under cursor.
+    " Otherwise, Search word under cursor.
+"     nmap <Space>ob <Plug>(openbrowser-smart-search)
+"     vmap <Space>ob <Plug>(openbrowser-smart-search)
+
+" }}}
+
+
 " unite.vim {{{
 
     " ,でunite.vimを起動

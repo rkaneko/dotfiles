@@ -159,6 +159,11 @@ C++
 +   `Space+a`:
     _altr forward : hppファイルとcppファイルを入れ替えるToggle。
 
+Markdown
+---
++   `:PrevimOpen`:
+    _:PrevimOpen : CurrentBufferのfiletype markdownのファイルのPreviewをopenbrowser#open()で設定されたブラウザで開く。
+
 
 Utility
 --------
@@ -174,3 +179,8 @@ Utility
 ### QuickFix Windowから
 +   `Qfreplace`
     _なし : QuickFixリストのバッファを開き、その画面上で編集・置換を行うことができる。  例えばQfreplaceバッファ画面で :%s/before/after/gc などで置換を行える。置換後は:wなどで完了する。
+
+### for browser
++   `gx`
+    _<Plug>(openbrowser-smart-search) : カーソル上のURLを開く。もしくはカーソル上のwordをgoogle検索する。
+

@@ -66,6 +66,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " qfreplace : QuickFix + replace utility
   NeoBundle 'thinca/vim-qfreplace'
 
+  " browser utility
+  NeoBundle 'tyru/open-browser.vim'
+
 " }}}
 
 " Unite {{{
@@ -123,6 +126,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " groovy files for Vim
     NeoBundleLazy 'mwaisgold/groovy-vim-files',
         \ { 'autoload' : { 'filetypes' : ['groovy'] } }
+
+" }}}
+
+" markdown {{{
+
+    " preview markdown
+    NeoBundleLazy 'kannokanno/previm',
+        \ { 'autoload' : { 'filetypes' : ['markdown'] } }
 
 " }}}
 
