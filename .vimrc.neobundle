@@ -69,6 +69,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " browser utility
   NeoBundle 'tyru/open-browser.vim'
 
+  " syntax checker
+  NeoBundle 'scrooloose/syntastic'
+
+  " surround anything
+  NeoBundle 'tpope/vim-surround'
+
 " }}}
 
 " Unite {{{

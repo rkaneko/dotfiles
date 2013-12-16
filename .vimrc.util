@@ -215,6 +215,13 @@
 
 " }}}
 
+" syntastic {{{
+
+    let g:syntastic_enable_signs=1
+    let g:syntastic_auto_loc_list=2
+
+" }}}
+
 " xml {{{
 
     " windowsで編集したxmlがUnixで変な風に表示されたら、整形できるかもしれない関数
@@ -232,7 +239,7 @@
 
 " }}}
 
-" Scala {{{
+" vim-scala {{{
 
     " sort scala import
     let g:scala_sort_across_groups=1
