@@ -184,3 +184,6 @@ Utility
 +   `gx`
     _<Plug>(openbrowser-smart-search) : カーソル上のURLを開く。もしくはカーソル上のwordをgoogle検索する。
 
+### syntastic
++   `:Errors`
+    _:Errors : syntasticがサポートしているfiletypeにおいてsyntaxチェックを行い,error箇所をQuickFixWindowに表示する。
