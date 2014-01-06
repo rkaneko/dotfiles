@@ -47,6 +47,12 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " }}}
 
+" commentary.vim {{{
+
+    autocmd FileType bib set commentstring=%%\ %s
+
+" }}}
+
 " I/O buffer {{{
 
     imap <C-b> <ESC>:read ~/.vim/bf<CR>i
