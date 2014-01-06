@@ -60,8 +60,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " caw.vim : utility for handling comment
   " NeoBundle 'tyru/caw.vim'
 
-  " vim-commentary : utility for handling comment
-  NeoBundle 'tpope/commentary.vim'
+  " commentary.vim : utility for handling comment
+  NeoBundle 'tpope/vim-commentary'
 
   " QFixGrep : QuickFix + grep utility
   NeoBundle 'fuenor/qfixgrep'
