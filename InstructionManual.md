@@ -170,6 +170,15 @@ Utility
 +   `\c`
     _caw:toggle : caw.vimによるコメントトグル。normal modeとvisual modeで使用できる。caw.vimがサポートしているfiletypeで適切なコメントハンドリングが可能。
 
++   `(visual mode)gc`
+    _なし : vim-commentaryによるコメントトグル。
+
++   `(normal mode)gcc`
+    _なし : vim-commentaryによるコメントアウト。
+
++   `(normal mode)gcu`
+    _なし : vim-commentaryによるコメントアウトを外す。
+
 +   `:Grep {pattern} {path/to/target}`
     _なし : QFixGrepによるgrep。grep後QuickFix Windowを開く。  :Grep here_is_method ./src/main/scala/*.scala
 

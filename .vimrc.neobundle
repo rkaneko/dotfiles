@@ -58,7 +58,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'mattn/sonictemplate-vim'
 
   " caw.vim : utility for handling comment
-  NeoBundle 'tyru/caw.vim'
+  " NeoBundle 'tyru/caw.vim'
+
+  " vim-commentary : utility for handling comment
+  NeoBundle 'tpope/commentary.vim'
 
   " QFixGrep : QuickFix + grep utility
   NeoBundle 'fuenor/qfixgrep'
