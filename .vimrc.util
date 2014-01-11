@@ -239,6 +239,19 @@
 
 " }}}
 
+" utility script {{{
+
+    " count the number of characters
+    function! s:count_character()
+        '<,'<s/./&/gn
+    endfunction
+
+    command! -nargs=0 CountChar call<SID>count_character()
+
+    vnoremap <buffer> <Space>cc :<C-u>CountChar
+
+" }}}
+
 " vim-scala {{{
 
     " sort scala import
