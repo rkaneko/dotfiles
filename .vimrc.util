@@ -239,42 +239,6 @@
 
 " }}}
 
-" utility script {{{
-
-    " get OS CR
-    function! s:get_carriage_ret()
-        :let l:cr = ''
-        if has('mac')
-            :let cr = '\r'
-        elseif has('win32')
-            :let cr = '\r\n'
-        elseif has('unix')
-            :let cr = '\n'
-        else
-            :let cr = ''
-        endif
-        return cr
-    endfunction
-
-    " count the number of characters
-    function! s:count_character()
-        :let tmp = @@
-        :silent normal gvy
-        :let selected = @@
-        :let @@ = tmp
-        :let removedHalfSpace = substitute(selected,"\ ","","g")
-        :let removedSpace = substitute(removedHalfSpace,"　","","g")
-        :let carriageReturn = s:get_carriage_ret()
-        :let removedCR = substitute(removedSpace,carriageReturn,"","g")
-        :echo strlen(removedCR)
-    endfunction
-
-    command! -nargs=0 CountChar call<SID>count_character()
-
-    vnoremap <buffer> <Space>cc :<C-u>CountChar
-
-" }}}
-
 " vim-scala {{{
 
     " sort scala import
