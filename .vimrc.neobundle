@@ -78,6 +78,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " surround anything
   NeoBundle 'tpope/vim-surround'
 
+  " Vim Outliner of Markups
+  NeoBundle 'vim-scripts/VOoM'
+
 " }}}
 
 " Unite {{{
