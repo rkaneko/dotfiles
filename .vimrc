@@ -11,3 +11,5 @@ source ~/dotfiles/.vimrc.complete
 source ~/dotfiles/.vimrc.util
 "editing config
 source ~/dotfiles/.vimrc.editing
+"GitLogViewer config
+source ~/dotfiles/.vimrc.gitlogviewer
