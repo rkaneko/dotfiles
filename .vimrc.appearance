@@ -121,14 +121,14 @@ endif
                 \   'fileencoding': 'MyFileencoding',
                 \   'mode': 'MyMode',
                 \ },
-                \ 'separator': { 'left': '⮀', 'right': '⮂' },
-                \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+                \ 'separator': { 'left': '', 'right': '' },
+                \ 'subseparator': { 'left': '|', 'right': '|'}
                 \ }
     function! MyModified()
         return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
     endfunction
     function! MyReadonly()
-        return &ft !~? 'help\|vimfiler\|gundo' && &ro ? '⭤' : ''
+        return &ft !~? 'help\|vimfiler\|gundo' && &ro ? 'x' : ''
     endfunction
     function! MyFilename()
         return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
@@ -139,7 +139,7 @@ endif
                     \ ('' != MyModified() ? ' ' . MyModified() : '')
     endfunction
     function! MyFugitive()
-        return &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && len(fugitive#head()) ? '⭠ '.fugitive#head() : ''
+        return &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && len(fugitive#head()) ?'b:'.fugitive#head() : ''
     endfunction
     function! MyFileformat()
         return winwidth('.') > 60 ? &fileformat : ''
