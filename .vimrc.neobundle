@@ -78,6 +78,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " surround anything
   NeoBundle 'tpope/vim-surround'
 
+  " sudo.vim
+  NeoBundle 'vim-scripts/sudo.vim'
+
 " }}}
 
 " Unite {{{
