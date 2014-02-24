@@ -63,6 +63,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " commentary.vim : utility for handling comment
   NeoBundle 'tpope/vim-commentary'
 
+  " vimgrep wrapper
+  " NeoBundle 'akira-hamada/friendly-grep.vim'
+
   " QFixGrep : QuickFix + grep utility
   NeoBundle 'fuenor/qfixgrep'
 
@@ -77,6 +80,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " surround anything
   NeoBundle 'tpope/vim-surround'
+
+  " Vim Outliner of Markups
+  NeoBundle 'vim-scripts/VOoM'
 
   " sudo.vim
   NeoBundle 'vim-scripts/sudo.vim'

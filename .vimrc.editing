@@ -19,6 +19,20 @@ set grepprg=grep\ -nh
 " vimgrep pipe quickfix-window
 autocmd QuickFixCmdPost *grep* cwindow
 
+" " friendly-grep.vim {{{
+
+"     nnoremap <C-g> <Esp>:FriendlyGrep<CR>
+
+"     " jump to * result
+"     nnoremap <LEFT> :cprevious<CR>
+"     nnoremap <RIGHT> :cnext<CR>
+"     nnoremap <UP> :<C-u>cfirst<CR>
+"     nnoremap <DOWN> :<C-u>clast<CR>
+
+"     let g:friendlygrep_display_result_in = 'quickfix'
+
+" " }}}
+
 " qfixgrep {{{
 
     " see : http://himinato.sblo.jp/category/1597668-1.html
