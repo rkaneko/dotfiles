@@ -89,10 +89,31 @@ inoremap <C-d> <Del>
 " when insert mode jj is esc
 inoremap jj <Esc>
 
-" 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//ge
-" 保存時にtabをスペースに変換する
-autocmd BufWritePre * :%s/\t/  /ge
+" see : http://c4se.hatenablog.com/entry/2013/03/10/032917
+" 保存時にfiletypeがmarkdown以外の時は行末の空白を除去する
+function! s:delete_end_of_sentence()
+    let position = getpos('.')
+    if &filetype !~ 'markdown'
+        " autocmd BufWritePre * :%s/\s\+$//ge
+        :%s/\s\+$//ge
+    endif
+    call setpos('.', position)
+endfunction
+
+" 保存時にfiletypeがmake以外の時はtabをスペースに変換する
+function! s:replace_tab_to_space()
+    let position = getpos('.')
+    if &filetype !~ 'make'
+        :%s/\t/  /ge
+    endif
+    call setpos('.', position)
+endfunction
+
+augroup vimrc_rkaneko_bufwritepre
+    autocmd!
+    autocmd BufWritePre * call s:delete_end_of_sentence()
+    autocmd BufWritePre * call s:replace_tab_to_space()
+augroup END
 
 " insertモードを抜けるとIMEオフ(この下の二つのコメントを外すとinsesrtモードでカーソルキー移動ができなくなる)
 " Ubuntuで設定が有効にならない。何かプラギンいるのかな？
