@@ -1,28 +1,25 @@
 dotfiles
 ====================
-This is my dotfiles .
+'dotfiles' includes .vimrc, .gvimrc, .bashrc and so on.
 
-Usage
------
+#### Prerequirements
++ OS: MacOSX or Linux(Ubuntu, CentOS...)
++ git
 
-### on console ###
-    $ cd
+### Usage
 
-    $ git clone https://github.com/rkaneko/dotfiles.git
+```bash
+$ cd
 
-    $ cd dotfiles
+$ git clone https://github.com/rkaneko/dotfiles.git
 
-    ## for Shougo/neobundle.vim
-    $ mkdir -p ~/dotfiles/.vim/bundle
-    $ git clone https://github.com/Shougo/neobundle.vim ~/dotfiles/.vim/bundle/neobundle.vim
+$ cd dotfiles
 
-    $ ./setup.sh
+$ ./setup.sh
 
-    $ vi
+$ vi
 
-    on vim
-    :NeoBundleInstall
-    :q!
-
-
-End
+on vim
+:NeoBundleInstall
+:q!
+```
