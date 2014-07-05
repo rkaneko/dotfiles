@@ -58,5 +58,5 @@ _EOT_
         exit 1
     fi
 
-    `git clone ${URL_TO_NEOBUNDLE} ${PATH_2_NEOBUNDLE}`
+    git clone ${URL_TO_NEOBUNDLE} ${PATH_2_NEOBUNDLE}
 }
