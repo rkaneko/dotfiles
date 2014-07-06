@@ -104,13 +104,12 @@ endfunction
 function! s:replace_tab_to_space()
     let position = getpos('.')
     if &filetype !~ 'make'
-        :%s/\t/  /ge
+        " :%s/\t/  /ge
+        set expandtab
+        retab
     endif
     call setpos('.', position)
 endfunction
-
-" replace tab to space
-" set expandtab
 
 augroup vimrc_rkaneko_bufwritepre
     autocmd!
