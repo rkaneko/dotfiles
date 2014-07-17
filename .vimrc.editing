@@ -67,6 +67,22 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " }}}
 
+" C++ {{{
+    let g:clang_format#style_options = {
+        \ 'AccessModifierOffset' : -4,
+        \ 'AllowShortIfStatementsOnASingleLine' : 'true',
+        \ 'AlwaysBreakTemplateDeclarations' : 'true',
+        \ 'BasedOnStyle' : 'Google',
+        \ 'Standard' : 'C++11',
+        \ 'BreakBeforeBraces' : 'Stroustrup',
+        \ }
+    " map to <Leader>cf in C++ code
+    autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+    autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
+
+"}}}
+
 " I/O buffer {{{
 
     imap <C-b> <ESC>:read ~/.vim/bf<CR>i

@@ -159,6 +159,12 @@ C++
 +   `Space+a`:
     _altr forward : hppファイルとcppファイルを入れ替えるToggle。
 
++   `(on include header file) gf`
+    _なし : includeしてあるheaderファイルを新しいバッファで開く。
+
++   `\cf`
+    _ClangFormat : clang-formatで設定に従い、ファイルフォーマットを行う。
+
 Markdown
 ---
 +   `:PrevimOpen`:

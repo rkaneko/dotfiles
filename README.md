@@ -5,6 +5,7 @@ dotfiles
 #### Prerequirements
 + OS: MacOSX or Linux(Ubuntu, CentOS...)
 + git
++ (C++) clang-format 3.4 or later
 
 ### Usage
 
