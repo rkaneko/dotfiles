@@ -87,6 +87,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " sudo.vim
   NeoBundle 'vim-scripts/sudo.vim'
 
+  " run a command and show its result
+  NeoBundleLazy 'thinca/vim-quickrun',
+      \ { 'autoload' : { 'filetypes' : ['html'] } }
+
+
 " }}}
 
 " Unite {{{
@@ -121,13 +126,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Scala {{{
 
   " vim-scala : syntax highlight for scala lang
-"   NeoBundle 'derekwyatt/vim-scala'
   " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
   NeoBundleLazy 'derekwyatt/vim-scala',
       \ { 'autoload' : { 'filetypes' : ['scala'] } }
-
-  " vim-scala : scala dictionary for vim
-  "NeoBundle 'yuroyoro/vim-scala'
 
 " }}}
 
@@ -164,9 +165,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " markdown {{{
 
     " preview markdown
-    NeoBundleLazy 'kannokanno/previm',
-        \ { 'autoload' : { 'filetypes' : ['markdown'] } }
+    " NeoBundleLazy 'kannokanno/previm',
+    "     \ { 'autoload' : { 'filetypes' : ['markdown'] } }
 
+    NeoBundleLazy 'rkaneko/previm', 'mkd-code-syntax-highlight',
+        \ { 'autoload' : { 'filetypes' : ['markdown'] } }
 " }}}
 
 filetype plugin indent on

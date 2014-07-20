@@ -245,3 +245,17 @@
     let g:scala_sort_across_groups=1
 
 " }}}
+
+" vim-quickrun {{{
+
+    let g:quickrun_config = {}
+    if has('win32') || has('win64')
+        let g:quickrun_config._ = {'runner' : 'vimproc', 'hook/output_encode/encoding': 'sjis'}
+    else
+        let g:quickrun_config._ = {'runner' : 'vimproc'}
+    endif
+
+    let g:quickrun_config.xhtml = {'command': 'open', 'outputter': 'browser'}
+    let g:quickrun_config.html = deepcopy(g:quickrun_config.xhtml)
+
+" }}}
