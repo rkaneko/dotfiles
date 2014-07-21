@@ -69,7 +69,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " C++ {{{
     let g:clang_format#style_options = {
-        \ 'AccessModifierOffset' : -4,
+        \ 'AccessModifierOffset' : -1,
         \ 'AllowShortIfStatementsOnASingleLine' : 'true',
         \ 'AlwaysBreakTemplateDeclarations' : 'true',
         \ 'BasedOnStyle' : 'Google',
