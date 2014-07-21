@@ -1,5 +1,5 @@
-"read plugins managed by neobundle.vim
-source ~/dotfiles/.vimrc.neobundle
+"read .vimrc.init
+source ~/dotfiles/.vimrc.init
 
 "basic config
 source ~/dotfiles/.vimrc.basic

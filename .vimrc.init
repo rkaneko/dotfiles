@@ -1,0 +1,31 @@
+""".vimrc.init
+
+" see : github.com/Shougo/neobundle.vim/README.md
+
+filetype off
+"set nocompatible
+
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+let g:neobundle#log_filename = expand('~/.vim/bundle/.neobundle/neobundle.log')
+let g:neobundle#install_max_processes = 4
+let g:neobundle#install_process_timeout = 180
+let g:neobundle#types#git#enable_submodule = 0
+
+if neobundle#has_cache()
+    NeoBundleLoadCache
+else
+    source ~/dotfiles/.vimrc.neobundle
+endif
+
+call neobundle#end()
+
+filetype plugin indent on
+
+NeoBundleCheck

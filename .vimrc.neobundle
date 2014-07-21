@@ -1,19 +1,5 @@
 """.vimrc.neobundle
 
-" see : github.com/Shougo/neobundle.vim/README.md
-
-filetype off
-"set nocompatible
-
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
 " Utility {{{
   " vimproc : execute asynchronously from vim
   NeoBundle 'Shougo/vimproc', {
@@ -169,7 +155,3 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "     \ { 'autoload' : { 'filetypes' : ['markdown'] } }
 
     NeoBundleLazy 'rkaneko/previm', 'mkd-code-syntax-highlight',
-        \ { 'autoload' : { 'filetypes' : ['markdown'] } }
-" }}}
-
-filetype plugin indent on
