@@ -151,7 +151,6 @@
 " markdown {{{
 
     " preview markdown
-    " NeoBundleLazy 'kannokanno/previm',
-    "     \ { 'autoload' : { 'filetypes' : ['markdown'] } }
+    NeoBundleLazy 'kannokanno/previm',
+        \ { 'autoload' : { 'filetypes' : ['markdown'] } }
 
-    NeoBundleLazy 'rkaneko/previm', 'mkd-code-syntax-highlight',

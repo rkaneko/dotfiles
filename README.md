@@ -7,6 +7,9 @@ dotfiles
 + git
 + (C++) clang-format 3.4 or later
 
+(optional)
++ ag: The Silver searcher (for Unite grep)
+
 ### Usage
 
 ```bash

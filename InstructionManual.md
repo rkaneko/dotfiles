@@ -20,8 +20,20 @@ Unite
 +   `,f` :
     _:Unite buffer_ :バッファリストを開く。
 
++   `,b` :
+    _:UniteWithBufferDir file :カレントバッファリストを開く。
+
 +   `,o` :
     _:Unite outline_ :unite-outline起動。メソッドなどを一覧表示する。
+
++   `,g` :
+    _:Unite grep -buffer-name=search-buffer<CR> :unite grep。この後TargetとPatternを入力する。
+
++   `,cg` :
+    _:Unite grep -buffer-name-search-buffer<CR><C-R><C-W> :unite grep。カーソル位置の単語でgrep。この後Targetを入力する。
+
++   `,r` :
+    _:UniteResume search-buffer :grep検索結果の再呼出。
 
 ### Unite開いている時
 +   `s` :
