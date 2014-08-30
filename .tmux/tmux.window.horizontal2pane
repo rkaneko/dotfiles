@@ -1,0 +1,13 @@
+### horizontal 2 pane window config
+
+# create new window
+new-window -n 1st
+
+# split window horizontally
+splitw -d
+
+# resize under pane
+resize-pane -D 5
+
+# move under pane
+# select-pane -D

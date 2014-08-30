@@ -6,7 +6,7 @@ alias vi='vim'
 alias v='vim'
 
 # tmux
-alias tmux='tmux -2'
+alias tmux="tmux -2 new-session \; source-file $HOME/dotfiles/.tmux/tmux.startup"
 
 # utility short cut
 alias up='cd ..'
