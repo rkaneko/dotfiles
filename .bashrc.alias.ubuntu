@@ -1,12 +1,2 @@
 # .bashrc.alias.ubuntu
 # @desc bash alias for Ubuntu
-
-THIS_FILE_DIR=`dirname $0`
-
-cd $THIS_FILE_DIR
-
-# bashrcのincludeのincludeはできないっぽい
-# include common alias
-if [ -f ${THIS_FILE_DIR}/.bashrc.alias ]; then
-. ${THIS_FILE_DIR}/.bashrc.alias
-fi

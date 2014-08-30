@@ -15,10 +15,13 @@ installNeoBundle ${CURRENT_DIR}
 # install NeoBundle end
 
 # make symbolic link
-DOT_FILES=( .vim .vimrc .gvimrc)
+DOT_FILES=( .vim .vimrc .gvimrc .tmux.conf )
 
 for file in ${DOT_FILES[@]}
 do
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
 # make sybolic link end
+
+# for git submodules
+git submodule

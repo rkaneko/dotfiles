@@ -5,6 +5,9 @@
 alias vi='vim'
 alias v='vim'
 
+# tmux
+alias tmux='tmux -2'
+
 # utility short cut
 alias up='cd ..'
 alias upp='cd ../../'

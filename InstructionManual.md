@@ -1,3 +1,68 @@
+Key mapping for CUI
+
+Terminal
+===
++ `Ctrl+a`: 行頭へ
++ `Ctrl+e`: 行末へ
++ `Ctrl+w`: 行頭方向に1Word消去
++ `Ctrl+k`: 行末方向へ1Word消去
++ `Ctrl+u`: 行頭方向へ全消去
++ `Ctrl+f`: 前方移動
++ `Ctrl+b`: 後方移動
++ `Ctrl+r`: コマンド履歴のインクリメンタルサーチ
++ `Esc+f`: 1Word後方移動
++ `Esc+b`: 1Word前方移動
+
+### My alias
++ `v`: `vim`
++ `tmux`: `tmux -2`
+
+tmux
+===
+
++ My prefix: `Ctrl+t`
+
+### basic
+
+```bash
+# start tmux
+$ tmux
+
+# list sessions
+$ tmux ls
+
+# list clients connecting sessions
+$ tmux lsc
+
+# kill a session
+$ tmux kill-session -t [target-session]
+
+# detach
+$ [prefix] d
+
+# attach
+$ tmux a -t [target session's index]
+
+# kill all sessions
+$ tmux kill-server
+```
+
+### handling window
++ `[prefix] -`: split window horizontally
++ `[prefix] |`: split window vertically
+(likely Vim)
++ `[prefix] h`: move left
++ `[prefix] j`: move down
++ `[prefix] k`: move up
++ `[prefix] l`: move right
+
+### utility
+copying likely Vim
++ `[prefix] v`: Start copy mode
++ `v`: (After entering copy mode) start selecting position
++ `y`: (After selecting part u want to copy) copy
++ `Ctrl v`: paste
+
 Vim key mappings cheet sheet
 =======================
 
