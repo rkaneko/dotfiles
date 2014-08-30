@@ -48,8 +48,17 @@ $ tmux kill-server
 ```
 
 ### handling window
++ `[prefix] c`: new window
++ `[prefix] w`: list windows
++ `[prefix] n`: next window
++ `[prefix] p`: previous window
++ `[prefix] [some number]`: go to number window
++ `[prefix] &`: kill window (without prompt)
+
+### handling pane
 + `[prefix] -`: split window horizontally
 + `[prefix] |`: split window vertically
++ `[prefix] x`: kill pane (without prompt)  
 (likely Vim)
 + `[prefix] h`: move left
 + `[prefix] j`: move down
