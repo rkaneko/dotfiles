@@ -102,15 +102,25 @@ Vimfiler
 参考URL : [www.karakaram.com/vimfiler](http://www.karakaram.com/vimfiler)
 
 
-Window移動
+Window系
 -----------
++   `ss`:
+    _:sp :Windowを横分割。
+
++   `sv`:
+    _:sv :Windowを縦分割。
 
 +   `sh`:
-    _Ctrl+w h :ひとつ右のウィンドウに移動。
+    _Ctrl+w h :ひとつ右のWindowに移動。
 
 +   `sl`:
-    _Ctrl+w l :ひとつ左のウィンドウに移動。
+    _Ctrl+w l :ひとつ左のWindowに移動。
 
++   `sj`:
+    _Ctrl+w j :ひとつ上のWindowに移動。
+
++   `sk`:
+    _Ctrl+w j :ひとつ下のWindowに移動。
 
 Completion
 ------------------

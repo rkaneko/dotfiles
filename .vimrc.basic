@@ -89,6 +89,11 @@ inoremap <C-d> <Del>
 " when insert mode jj is esc
 inoremap jj <Esc>
 
+" split vertical
+nnoremap sv :vs<CR>
+" split horizontal
+nnoremap ss :sp<CR>
+
 " see : http://c4se.hatenablog.com/entry/2013/03/10/032917
 " 保存時にfiletypeがmarkdown以外の時は行末の空白を除去する
 function! s:delete_end_of_sentence()
