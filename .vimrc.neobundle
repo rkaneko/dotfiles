@@ -43,14 +43,8 @@
   " Easy and high speed coding method
   NeoBundle 'mattn/sonictemplate-vim'
 
-  " caw.vim : utility for handling comment
-  " NeoBundle 'tyru/caw.vim'
-
   " commentary.vim : utility for handling comment
   NeoBundle 'tpope/vim-commentary'
-
-  " vimgrep wrapper
-  " NeoBundle 'akira-hamada/friendly-grep.vim'
 
   " QFixGrep : QuickFix + grep utility
   NeoBundle 'fuenor/qfixgrep'
@@ -89,6 +83,7 @@
   NeoBundle 'thinca/vim-unite-history'
   NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'choplin/unite-vim_hacks'
+  NeoBundle 'Shougo/neomru.vim'
 
 " }}}
 
@@ -141,8 +136,6 @@
 
 " groovy {{{
 
-    " groovy files for Vim
-"     NeoBundleLazy 'mwaisgold/groovy-vim-files',
     NeoBundleLazy 'rkaneko/groovy.vim',
         \ { 'autoload' : { 'filetypes' : ['groovy'] } }
 

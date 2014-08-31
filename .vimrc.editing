@@ -54,13 +54,6 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " }}}
 
-" caw.vim {{{
-
-    " nmap <Leader>c <Plug>(caw:I:toggle)
-    " vmap <Leader>c <Plug>(caw:I:toggle)
-
-" }}}
-
 " commentary.vim {{{
 
     autocmd FileType bib set commentstring=%%\ %s
