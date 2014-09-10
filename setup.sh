@@ -23,5 +23,10 @@ do
 done
 # make sybolic link end
 
+# make symbolic link
+ln -s $HOME/dotfiles/git/dotgitignore $HOME/.gitignore
+
+ln -s $HOME/dotfiles/git/.gitconfig $HOME/.gitconfig
+
 # for git submodules
 git submodule

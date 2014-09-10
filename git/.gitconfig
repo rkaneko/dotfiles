@@ -1,0 +1,10 @@
+[user]
+
+[push]
+    default = current
+
+[core]
+    pager = LESS=-R less
+
+[config]
+    ui = true

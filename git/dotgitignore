@@ -1,0 +1,22 @@
+# Global .gitignore
+
+# OS generated files #
+######################
+.DS_Store$
+.DS_Store?$
+._*$
+.Spotlight-V100$
+.Trashes$
+Icon?$
+ehthumbs.db$
+Thumbs.db$
+
+# Compiled source #
+###################
+*.class$
+*.dll$
+*.exe$
+*.o$
+*.so$
+# OpenOffice Lock$
+.~lock.*$
