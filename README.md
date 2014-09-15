@@ -1,11 +1,14 @@
 dotfiles
 ====================
-'dotfiles' includes .vimrc, .gvimrc, .bashrc and so on.
+'dotfiles' includes .vimrc, .gvimrc, .zshrc and so on.
 
 #### Prerequirements
 + OS: MacOSX or Linux(Ubuntu, CentOS...)
 + git
 + (C++) clang-format 3.4 or later
++ Vim
++ tmux
++ zsh + [Prezto](https://github.com/sorin-ionescu/prezto)
 
 (optional)
 + ag: The Silver searcher (for Unite grep)
@@ -20,6 +23,8 @@ $ brew install tmux
 
 # for tmux clipboard
 $ brew install reattach-to-user-namespace
+
+$ brew install zsh
 ```
 
 + Ubuntu
@@ -31,7 +36,13 @@ $ sudo aptitude install tmux
 
 # for clipboard
 $ sudo aptitude install xclip xsel
+
+$ sudo aptitude install zsh
 ```
+
+### install Prezto
+Install following [Prezto README](https://github.com/sorin-ionescu/prezto).
+Don't forget to change login shell zsh.
 
 ### Usage
 
