@@ -52,3 +52,37 @@ $ ./setup.sh
 # add option -2 for tmux-color OR set alias(see dotfiles/.bashrc.alias
 $ tmux -2
 ```
+
+#### Appendix
++ [ghq](https://github.com/motemen/ghq)
++ [hub](https://github.com/github/hub)
++ [tig](https://github.com/jonas/tig)
++ [tmuxinator](https://github.com/tmuxinator/tmuxinator)
++ [tmux-plugins](https://github.com/tmux-plugins)
+
+### Utility env
+```bash
+# after install golang
+# install ghp: a github's repository manager
+$ go get github.com/motemen/ghq
+
+# install gh: hub clone implemented with golang (notice) u cannot install gh with ghq or go get
+$ mkdir -p ~/go/src/github.com/jingweno/
+$ cd ~/go/src/github.com/jingweno/
+$ git clone https://github.com/jingweno/gh.git
+$ cd gh
+$ script/install
+# see gh's version
+$ gh version
+git version 1.8.4.3
+gh version 2.1.0
+
+# install Tig: text mode interface for Git
+$ ghq get https://github.com/jonas/tig.git
+$ cd ~/.ghq/github.com/jonas/tig/
+$ make && make install
+$ source ~/.bashrc
+# see tig's help 
+$ tig -h
+# (and see dotfiles/.tigrc)
+```

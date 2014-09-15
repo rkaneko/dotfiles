@@ -15,7 +15,7 @@ installNeoBundle ${CURRENT_DIR}
 # install NeoBundle end
 
 # make symbolic link
-DOT_FILES=( .vim .vimrc .gvimrc .tmux.conf )
+DOT_FILES=( .vim .vimrc .gvimrc .tmux.conf .tigrc)
 
 for file in ${DOT_FILES[@]}
 do
