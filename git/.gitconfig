@@ -5,6 +5,7 @@
 
 [core]
     pager = LESS=-R less
+    editor = vim
 
 [config]
     ui = true
