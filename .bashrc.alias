@@ -11,6 +11,7 @@ alias tmls="tmux ls"
 alias tmlc="tmux lsc"
 alias tmks="tmux kill-server"
 alias tma="tmux a"
+alias tmux="tmux -2"
 
 # git
 alias gaA='git add -A'

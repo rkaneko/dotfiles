@@ -21,12 +21,14 @@ for file in ${DOT_FILES[@]}
 do
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
+
+ln -s $HOME/dotfiles/.tmux/.tmux-powerlinerc $HOME/.tmux-powerlinerc
 # make sybolic link end
 
 # make symbolic link
 ln -s $HOME/dotfiles/git/dotgitignore $HOME/.gitignore
 
-ln -s $HOME/dotfiles/git/.gitconfig $HOME/.gitconfig
+# ln -s $HOME/dotfiles/git/.gitconfig $HOME/.gitconfig
 
 # for git submodules
 git submodule
