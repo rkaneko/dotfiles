@@ -51,6 +51,12 @@ $ ./setup.sh
 
 # add option -2 for tmux-color OR set alias(see dotfiles/.bashrc.alias
 $ tmux -2
+
+# (on tmux)
+# install tmux plugins managed with tpm
+$ [tmux's prefix] I
+# update tmux plugins
+$ [tmux's prefix] U
 ```
 
 #### Appendix
