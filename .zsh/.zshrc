@@ -13,3 +13,9 @@ fi
 if [[ -s "$HOME/dotfiles/.zsh/.zshrc.alias" ]]; then
   source "$HOME/dotfiles/.zsh/.zshrc.alias"
 fi
+
+# Source local .zshrc
+if [[ -s "$HOME/.zshrc.local" ]]; then
+  source "$HOME/.zshrc.local"
+fi
+
