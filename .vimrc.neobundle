@@ -71,7 +71,6 @@
   NeoBundleLazy 'thinca/vim-quickrun',
       \ { 'autoload' : { 'filetypes' : ['html'] } }
 
-
 " }}}
 
 " Unite {{{
