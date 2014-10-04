@@ -103,3 +103,9 @@ $ source ~/.bashrc
 $ tig -h
 # (and see dotfiles/.tigrc)
 ```
+### for Go
+```bash
+$ go get github.com/nsf/gocode
+
+$ go get github.com/golang/lint/golint
+```
