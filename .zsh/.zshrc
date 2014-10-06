@@ -19,3 +19,6 @@ if [[ -s "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
 fi
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/rkaneko/.gvm/bin/gvm-init.sh" ]] && source "/home/rkaneko/.gvm/bin/gvm-init.sh"
