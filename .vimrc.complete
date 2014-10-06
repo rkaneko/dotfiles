@@ -6,7 +6,7 @@
 
 " 括弧の自動補完
 " ref : https://github.com/yuroyoro/dotfiles/blob/master/.vimrc.editing l58
-inoremap { {}<LEFT>
+"inoremap { {}<LEFT>
 "inoremap [ []<LEFT>
 "inoremap ( ()<LEFT>
 "inoremap " ""<LEFT>
