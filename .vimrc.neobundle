@@ -164,6 +164,14 @@
 
     "Google Closure's Soy templateing lauguage
     NeoBundleLazy 'duganchen/vim-soy',
-        \ { 'autoload' : { 'filtypes' : ['javascript'] } }
+        \ { 'autoload' : { 'filtypes' : ['soy'] } }
+
+" }}}
+
+" Templates {{{
+
+    "FreeMarker
+    NeoBundleLazy 'chaquotay/ftl-vim-syntax',
+        \ { 'autoload' : { 'filetypes' : ['ftl'] } }
 
 " }}}

@@ -9,3 +9,9 @@ au BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setf markdown
 
 " fxml
 au BufNewFile,BufRead *.fxml setf fxml.xml
+
+" FreeMaker
+au BufNewFile,BufRead *.ftl setf ftl.html
+
+" soy
+au BufNewFile,BufRead *.soy setf soy.html
