@@ -163,7 +163,14 @@
 " JavaScript {{{
 
     "Google Closure's Soy templateing lauguage
-    NeoBundleLazy 'duganchen/vim-soy',
-        \ { 'autoload' : { 'filtypes' : ['javascript'] } }
+    NeoBundle 'duganchen/vim-soy'
+
+" }}}
+
+" Templates {{{
+
+    "FreeMarker
+    NeoBundleLazy 'chaquotay/ftl-vim-syntax',
+        \ { 'autoload' : { 'filetypes' : ['ftl'] } }
 
 " }}}
