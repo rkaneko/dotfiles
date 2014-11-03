@@ -53,10 +53,7 @@ $ git clone https://github.com/rkaneko/dotfiles.git
 
 $ cd dotfiles
 
-$ git submodule
-
-# (optional)
-$ git submodule update
+$ git submodule init && git submodule update
 
 $ ./setup.sh
 

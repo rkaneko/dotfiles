@@ -1,0 +1,8 @@
+# tmux.conf for CentOS
+
+# If ur tmux's version 1.8 or later, copy-pipe is available.
+# see: http://qiita.com/kkabetani/items/e37ac1e4e0b53c418a35
+bind-key -t vi-copy y copy-pipe "xclip -selection clipboard"
+bind-key -t vi-copy C-c copy-pipe "xclip -selection clipboard"
+bind -r C-] paste-buffer
+bind -r C-v paste-buffer
