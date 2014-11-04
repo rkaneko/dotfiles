@@ -70,7 +70,8 @@ copying likely Vim
 + `[prefix] v`: Start copy mode
 + `v`: (After entering copy mode) start selecting position
 + `y`: (After selecting part u want to copy) copy
-+ `Ctrl v`: paste
++ `[prefix] Ctrl-v`: paste
++ `[prefix] Ctrl-h`: select text from buffer history (If u quit seeing history, put `q`.)
 
 Vim key mappings cheet sheet
 =======================

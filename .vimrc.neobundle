@@ -163,8 +163,7 @@
 " JavaScript {{{
 
     "Google Closure's Soy templateing lauguage
-    NeoBundleLazy 'duganchen/vim-soy',
-        \ { 'autoload' : { 'filtypes' : ['soy'] } }
+    NeoBundle 'duganchen/vim-soy'
 
 " }}}
 
