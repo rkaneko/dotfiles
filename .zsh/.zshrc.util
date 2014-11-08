@@ -1,0 +1,45 @@
+# .zshrc for extension.
+
+# ag -> peco -> Vim
+# see: http://qiita.com/fmy/items/b92254d14049996f6ec3
+function agvi () {
+    vim $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "-c " $2 " " $1}')
+}
+
+# find -> peco -> Vim
+# see: http://lnial.hatenablog.com/entry/2014/07/30/220854
+function peco-dir-open-app () {
+    find . | peco | xargs sh -c 'vim "$0" < /dev/tty'
+    zle clear-screen
+}
+zle -N peco-dir-open-app
+bindkey '^pf' peco-dir-open-app # C-p f
+
+# ls -> peco
+# see: http://qiita.com/sona-tar/items/47800e52f972b17f73bb
+# Usage: vi ls-peco (or C-p l)
+function ls-peco() {
+    FILTERD_LS=$(ls | peco)
+    BUFFER=${BUFFER}${FILTERD_LS}
+    CURSOR=$#BUFFER
+}
+zle -N ls-peco
+bindkey "^pl" ls-peco # C-p l
+
+# search command history incrementally
+# see: http://futurismo.biz/archives/2514
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history # C-r

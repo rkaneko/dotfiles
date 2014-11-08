@@ -15,7 +15,7 @@ installNeoBundle ${CURRENT_DIR}
 # install NeoBundle end
 
 # make symbolic link
-DOT_FILES=( .vim .vimrc .gvimrc .tigrc)
+DOT_FILES=( .vim .vimrc .gvimrc .tigrc .config )
 
 for file in ${DOT_FILES[@]}
 do
@@ -31,7 +31,7 @@ ln -s $HOME/dotfiles/.tmux/.tmux-powerlinerc $HOME/.tmux-powerlinerc
 
 # zsh
 # ZDOT_FILES=`find $HOME/dotfiles/.zsh -type f | awk -F/ '{print $NF}'`
-ZDOT_FILES=(.zlogin .zlogout .zpreztorc .zshenv .zprofile .zshrc)
+ZDOT_FILES=( .zlogin .zlogout .zpreztorc .zshenv .zprofile .zshrc )
 for ZDOT_FILE in ${ZDOT_FILES[@]}
 do
     ln -s $HOME/dotfiles/.zsh/$ZDOT_FILE $HOME/$ZDOT_FILE
@@ -41,7 +41,7 @@ done
 # make symbolic link
 ln -s $HOME/dotfiles/git/dotgitignore $HOME/.gitignore
 
-# ln -s $HOME/dotfiles/git/.gitconfig $HOME/.gitconfig
+ln -s $HOME/dotfiles/git/.gitconfig $HOME/.gitconfig
 
 # for git submodules
-git submodule
+git submodule init
