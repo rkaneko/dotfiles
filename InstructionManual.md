@@ -307,3 +307,6 @@ Utility
 
 +  `Ctrl-r`
     _なし : コマンドヒストリをpecoる。
+
++  `Ctrl-p + f`
+    _なし : peco -> インクリメンタルサーチ -> Vimで開く。

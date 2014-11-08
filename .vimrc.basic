@@ -18,9 +18,13 @@ set ignorecase
 set smartcase
 " set list                             " show white space and etc
 set shortmess& shortmess+=I          " disable showing message on startup time
-set noimdisable                      " use IM: When u escape input mode, automatically set IME off.
+set imdisable                        " use IM: When u escape input mode, automatically set IME off.(Enable only KaoriYa Vim)
 set iminsert=0 imsearch=0            " on startup time set IME off
 set noimcmdline                      " on command line set IME off
+" insertモードを抜けるとIMEオフ(この下の二つのコメントを外すとinsertモードでカーソルキー移動ができなくなる)
+" inoremap <silent> <ESC> <ESC>
+" inoremap <silent> <C-[> <ESC>
+
 set hlsearch                         " high light words u are searching
 " clear high light with ESC + ESC
 nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
@@ -176,8 +180,3 @@ augroup vimrc_rkaneko_bufwritepre
     autocmd BufWritePre * call s:delete_end_of_sentence()
     autocmd BufWritePre * call s:replace_tab_to_space()
 augroup END
-
-" insertモードを抜けるとIMEオフ(この下の二つのコメントを外すとinsesrtモードでカーソルキー移動ができなくなる)
-" Ubuntuで設定が有効にならない。何かプラギンいるのかな？
-"inoremap <silent> <ESC> <ESC>
-"inoremap <silent> <C-[> <ESC>
