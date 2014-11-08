@@ -12,7 +12,52 @@ set backspace=indent,eol,start       " remove all with backspace key
 set whichwrap=b,s,[,],<,>,~          " moving as screen editor
 set showcmd                          " show command on the status line
 set showmode                         " show current mode
+set vb t_vb=                         " off beep sound
+" If input contains Large letters, ignore case
+set ignorecase
+set smartcase
+" set list                             " show white space and etc
+set shortmess& shortmess+=I          " disable showing message on startup time
+set noimdisable                      " use IM: When u escape input mode, automatically set IME off.
+set iminsert=0 imsearch=0            " on startup time set IME off
+set noimcmdline                      " on command line set IME off
+set hlsearch                         " high light words u are searching
+" clear high light with ESC + ESC
+nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
+set incsearch
+" 検索後画面の中心に
+nnoremap n nzvzz
+nnoremap N Nzvzz
+nnoremap * *zvzz
+nnoremap # *zvzz
 
+nnoremap <C-Space> i<Space><Esc><Right> " insert space with C-Space
+
+" doesn't put comment on starting new line
+set formatoptions-=r
+set formatoptions-=o
+set fileformats=unix,dos,mac
+set ttyfast
+set ambiwidth=double
+set whichwrap +=h
+set whichwrap +=l
+set history=100
+
+if has('persistent_undo')
+    if ! isdirectory($HOME.'/.vim/undo')
+        call mkdir($HOME.'/.vim/undo', 'p')
+    endif
+    set undodir=~/.vim/undo
+    set undofile
+endif
+
+" 行数が少ない時だけ行数表示
+autocmd BufEnter * if line('$') > 10000 | setlocal nonumber | else | setlocal number | endif
+
+" open file with specifying encoding
+command! -bang -complete=file -nargs=? Utf8 edit<bang> ++enc=utf-8 <args>
+command! -bang -complete=file -nargs=? Sjis edit<bang> ++enc=cp932 <args>
+command! -bang -complete=file -nargs=? Euc edit<bang> ++enc=eucjp <args>
 
 set clipboard+=unnamed,autoselect    " use OS clipboard
 " use mouse on Terminal
@@ -23,6 +68,16 @@ set ttymouse=xterm2
 " set clipboard=unnamed                " put yanked letters into clipboard
 " On insert mode, you can put clipped letters with Ctrl+p
 imap <C-p> <ESC>"*pa
+
+" delete buffer
+function! s:delete_current_buf()
+    let bufnr = bufnr('%')
+    bnext
+    if bufnr == bufnr('%') | enew | endif
+    silent! bdelete #
+endfunction
+nnoremap <C-w>d :<C-u>call <SID>delete_current_buf()<CR>
+nnoremap <C-w>D :<C-u>bdelete<CR>
 
 " see : http://atasatamatara.hatenablog.jp/entry/2013/03/07/215806
 " copy text with Ctrl+c
