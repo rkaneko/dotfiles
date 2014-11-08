@@ -2,7 +2,7 @@ dotfiles
 ====================
 'dotfiles' includes .vimrc, .gvimrc, .zshrc and so on.
 
-#### Prerequirements
+#### Prerequisites
 + OS: MacOSX or Linux(Ubuntu, CentOS...)
 + git 1.9 or later
 + mercurial
@@ -131,3 +131,6 @@ $ go get github.com/nsf/gocode
 
 $ go get github.com/golang/lint/golint
 ```
+
+### IME config
+If u want to IME off when u escapes Vim insert mode, please see [this Web site](http://hotolab.net/blog/vim_ime/)
