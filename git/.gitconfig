@@ -42,6 +42,10 @@
     pl = pull
     st = status --short --branch
     sh = show
+    sh2 = show HEAD~2 # show 2nd latest commit info from the latest.
+    sh3 = show HEAD~3
+    sh4 = show HEAD~4
+    sh5 = show HEAD~5
     ft = fetch
     ad = add
     co = checkout
@@ -67,10 +71,10 @@
     branch-local = branch -a # local branchを表示
     ds = diff --staged --color-words # indexとHEADのdiffを表示. --staged = --cached
     d1 = diff HEAD~ # HEADとHEADから一つ前のdiff
-    d2 = diff HEAD~2 # HEADとHEADから2個前のdiff
-    d3 = diff HEAD~3
-    d4 = diff HEAD~4
-    d5 = diff HEAD~5
+    d2 = diff HEAD~~ # HEADとHEADから2個前のdiff
+    d3 = diff HEAD~~~
+    d4 = diff HEAD~~~~
+    d5 = diff HEAD~~~~~
     dm = diff master # HEADとlocal masterのdiff
     drm = diff remotes/origin/master
     dd = diff develop
