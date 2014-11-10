@@ -20,8 +20,8 @@ alias gcm='git commit -m'
 alias gpo='git push origin'
 alias gdc='git diff --cached --color'
 alias gdcs='git diff --cached --stat --color'
-alias gdhh='git diff HEAD^ HEAD --color'
-alias gdhhs='git diff HEAD^ HEAD --stat --color'
+alias gdh='git diff HEAD~ --color'
+alias gdhs='git diff HEAD~ --stat --color'
 alias ggrep='git grep --color -e'
 
 # utility short cut

@@ -299,3 +299,14 @@ Utility
 ### syntastic
 +   `:Errors`
     _:Errors : syntasticがサポートしているfiletypeにおいてsyntaxチェックを行い,error箇所をQuickFixWindowに表示する。
+
+### Tips
+
++  `agvi some_key_word some_dir`
+    _なし : agで検索したものをpecoって、選択したものをVimで開く。
+
++  `Ctrl-r`
+    _なし : コマンドヒストリをpecoる。
+
++  `Ctrl-p + f`
+    _なし : peco -> インクリメンタルサーチ -> Vimで開く。
