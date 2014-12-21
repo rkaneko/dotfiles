@@ -15,6 +15,11 @@ function peco-dir-open-app () {
 zle -N peco-dir-open-app
 bindkey '^pf' peco-dir-open-app # C-p f
 
+# find -> Vim
+function vifind () {
+    find -name $1 -exec vim {} \;
+}
+
 # ls -> peco
 # see: http://qiita.com/sona-tar/items/47800e52f972b17f73bb
 # Usage: vi ls-peco (or C-p l)
