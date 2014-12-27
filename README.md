@@ -35,7 +35,8 @@ $ brew install zsh
 ```bash
 $ sudo aptitude install vim vim-nox vim-gtk vim-gnome vim-athena
 
-$ sudo aptitude install tmux
+# use shime's script
+$ curl -fsSL https://gist.github.com/shime/5706655/raw/install.sh | sudo bash -e
 
 # for clipboard
 $ sudo aptitude install xclip xsel
@@ -119,7 +120,9 @@ gh version 2.1.0
 # install Tig: text mode interface for Git
 $ ghq get https://github.com/jonas/tig.git
 $ cd ~/.ghq/github.com/jonas/tig/
-$ make && make install
+# (for build tig)
+$ sudo apt-get install libncurses5-dev
+$ sudo make clean && sudo make distclean && sudo make && sudo make install
 $ source ~/.bashrc
 # see tig's help 
 $ tig -h
