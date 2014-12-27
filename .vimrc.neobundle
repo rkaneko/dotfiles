@@ -1,98 +1,95 @@
 """.vimrc.neobundle
 
 " Utility {{{
-  " vimproc : execute asynchronously from vim
-  NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+    " vimproc : execute asynchronously from vim
+    NeoBundle 'Shougo/vimproc', {
+        \ 'build' : {
+        \     'windows' : 'make -f make_mingw32.mak',
+        \     'cygwin' : 'make -f make_cygwin.mak',
+        \     'mac' : 'make -f make_mac.mak',
+        \     'unix' : 'make -f make_unix.mak',
+        \    },
+        \ }
 
-  " vimshell
-  NeoBundle 'Shougo/vimshell.git'
-  "NeoBundle 'Shougo/vimshell.git',
-  "    \ { 'depends' : 'Shougo/vimproc' }
+    " vimshell
+    NeoBundle 'Shougo/vimshell.git'
+    "NeoBundle 'Shougo/vimshell.git',
+    "    \ { 'depends' : 'Shougo/vimproc' }
 
-  " vim-scripts repos
-  NeoBundle 'L9'
+    " vim-scripts repos
+    NeoBundle 'L9'
 
-  " utility to manage file
-  NeoBundle 'Shougo/vimfiler.git'
-  "NeoBundle 'Shougo/vimfiler.git',
-  "    \ { 'depends' : 'Shougo/unite.vim' }
+    " utility to manage file
+    NeoBundle 'Shougo/vimfiler.git'
+    "NeoBundle 'Shougo/vimfiler.git',
+    "    \ { 'depends' : 'Shougo/unite.vim' }
 
-  " keyword completion system
-  function! s:meet_neocomplete_requirements()
-      return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
-  endfunction
+    " keyword completion system
+    function! s:meet_neocomplete_requirements()
+        return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
+    endfunction
 
-  if s:meet_neocomplete_requirements()
-      NeoBundle 'Shougo/neocomplete.vim'
-      NeoBundleFetch 'Shougo/neocomplcache.vim'
-  else
-      NeoBundleFetch 'Shougo/neocomplete.vim'
-      NeoBundle 'Shougo/neocomplcache.vim'
-  endif
+    if s:meet_neocomplete_requirements()
+        NeoBundle 'Shougo/neocomplete.vim'
+        NeoBundleFetch 'Shougo/neocomplcache.vim'
+    else
+        NeoBundleFetch 'Shougo/neocomplete.vim'
+        NeoBundle 'Shougo/neocomplcache.vim'
+    endif
 
-  " snippet support
-  NeoBundle 'Shougo/neosnippet'
+    " snippet support
+    NeoBundle 'Shougo/neosnippet'
 
-  " Easy and high speed coding method
-  NeoBundle 'mattn/sonictemplate-vim'
+    " Easy and high speed coding method
+    NeoBundle 'mattn/sonictemplate-vim'
 
-  " commentary.vim : utility for handling comment
-  NeoBundle 'tpope/vim-commentary'
+    " commentary.vim : utility for handling comment
+    NeoBundle 'tpope/vim-commentary'
 
-  " QFixGrep : QuickFix + grep utility
-  NeoBundle 'fuenor/qfixgrep'
+    " QFixGrep : QuickFix + grep utility
+    NeoBundle 'fuenor/qfixgrep'
 
-  " qfreplace : QuickFix + replace utility
-  NeoBundle 'thinca/vim-qfreplace'
+    " qfreplace : QuickFix + replace utility
+    NeoBundle 'thinca/vim-qfreplace'
 
-  " browser utility
-  NeoBundle 'tyru/open-browser.vim'
+    " browser utility
+    NeoBundle 'tyru/open-browser.vim'
 
-  " syntax checker
-  NeoBundle 'scrooloose/syntastic'
+    " syntax checker
+    NeoBundle 'scrooloose/syntastic'
 
-  " surround anything
-  NeoBundle 'tpope/vim-surround'
+    " surround anything
+    NeoBundle 'tpope/vim-surround'
 
-  " Vim Outliner of Markups
-  NeoBundle 'vim-scripts/VOoM'
+    " Vim Outliner of Markups
+    NeoBundle 'vim-scripts/VOoM'
 
-  " sudo.vim
-  NeoBundle 'vim-scripts/sudo.vim'
+    " sudo.vim
+    NeoBundle 'vim-scripts/sudo.vim'
 
-  " run a command and show its result
-  NeoBundleLazy 'thinca/vim-quickrun',
-      \ { 'autoload' : { 'filetypes' : ['html'] } }
+    " run a command and show its result
+    NeoBundleLazy 'thinca/vim-quickrun',
+        \ { 'autoload' : { 'filetypes' : ['html'] } }
 
 " }}}
 
 " Unite {{{
 
-  " unite.vim : incredible vim plugin implemented with vim script
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'tsukkee/unite-help'
-  NeoBundle 'Shougo/unite-outline'
-  NeoBundle 'thinca/vim-unite-history'
-  NeoBundle 'tsukkee/unite-tag'
-  NeoBundle 'choplin/unite-vim_hacks'
-  NeoBundle 'Shougo/neomru.vim'
+    " unite.vim : incredible vim plugin implemented with vim script
+    NeoBundle 'Shougo/unite.vim'
+    NeoBundle 'tsukkee/unite-help'
+    NeoBundle 'Shougo/unite-outline'
+    NeoBundle 'thinca/vim-unite-history'
+    NeoBundle 'tsukkee/unite-tag'
+    NeoBundle 'choplin/unite-vim_hacks'
+    NeoBundle 'Shougo/neomru.vim'
 
 " }}}
 
 " Appearance {{{
 
-  " vim-airline : make cui rich, implemented by Vim Script
-"   NeoBundle 'bling/vim-airline'
-
-  " lightline.vim : A light and configurable statusline for Vim
-  NeoBundle 'itchyny/lightline.vim'
+    " lightline.vim : A light and configurable statusline for Vim
+    NeoBundle 'itchyny/lightline.vim'
 
 " }}}
 
@@ -101,14 +98,17 @@
     " fugitive.vim : Git wrapper
     NeoBundle 'tpope/vim-fugitive'
 
+    " agit.vim : gitk clone for Vim
+    NeoBundle 'cohama/agit.vim'
+
 " }}}
 
 " Scala {{{
 
-  " vim-scala : syntax highlight for scala lang
-  " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
-  NeoBundleLazy 'derekwyatt/vim-scala',
-      \ { 'autoload' : { 'filetypes' : ['scala'] } }
+    " vim-scala : syntax highlight for scala lang
+    " 遅延ロード see : http://www.slideshare.net/Shougo/neobundlevim
+    NeoBundleLazy 'derekwyatt/vim-scala',
+        \ { 'autoload' : { 'filetypes' : ['scala'] } }
 
 " }}}
 

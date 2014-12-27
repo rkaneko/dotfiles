@@ -1,6 +1,6 @@
 """ .vimrc.util
 "======================================================
-" config for moving(cursor, window), utiltity plugins searching and so on
+" config for moving(cursor, window), utility plugins searching and so on
 "======================================================
 
 
@@ -140,12 +140,12 @@
 
     " function keys for buffer
     " F2 previous buffer
-    map <F2> <ESC>:bp<CR>
+    nnoremap <F2> <ESC>:bp<CR>
     " F3 next buffer
-    map <F3> <ESC>:bn<CR>
+    nnoremap <F3> <ESC>:bn<CR>
     " F4 delete buffer
-    map <F4> <ESC>:bnext \| bdelete #<CR>
-    command! Bw :bnext \|bdelete #
+    nnoremap <F4> <ESC>:bnext \| bdelete #<CR>
+    command! BufDel :bnext \|bdelete #
 
 " }}}
 
@@ -154,58 +154,6 @@
 
     " vimshell split option
     let g:vimshell_split_command = 'below split'
-
-    " for sbt
-    function! s:start_sbt()
-        if !has_key(t:, 'sbt_cmds')
-            "let t:sbt_cmds = [input('t:sbt_cmds[0] = ')]
-            let t:sbt_cmds = ['compile']
-            echo "let t:sbt_cmd = 'compile'"
-        endif
-        execute "VimShellInteractive --split='below split \| resize 12' sbt"
-        stopinsert
-        let t:sbt_bufname = bufname('%')
-"         wincmd J
-"         wincmd p
-    endfunction
-
-    command! -nargs=0 StartSBT call <SID>start_sbt()
-
-    function! s:sbt_run()
-        if !has_key(t:, 'sbt_cmds')
-            echoerr 'please give t:sbt_cmds a list'
-            return
-        endif
-
-        let sbt_bufname = get(t:, 'sbt_bufname')
-        if sbt_bufname !=# ''
-            " go to the window
-            let wn = bufwinnr(sbt_bufname)
-            execute wn . 'wincmd w'
-            " whew
-            normal! Gzt
-            " go back to the previous window
-            wincmd p
-
-            call vimshell#interactive#set_send_buffer(sbt_bufname)
-            call vimshell#interactive#send(t:sbt_cmds)
-            " explosion
-            "call vimproc#system_bg('curl -s http://localhost:8080/requests/status.xml?command=pl_play')
-        else
-            echoerr 'try StartSBT'
-        endif
-    endfunction
-
-    function! s:vimrc_scala()
-        nnoremap <buffer> <Space>m :<C-u>write<Cr>:call <SID>sbt_run()<Cr>
-        nnoremap <buffer> <Space>st :<C-u>StartSBT
-        nnoremap <buffer> <Space>vsi :<C-u>VimShellInteractive --split='below split \| resize 12' scala<Cr>
-    endfunction
-
-    augroup vimrc_scala
-        autocmd!
-        autocmd FileType scala call s:vimrc_scala()
-    augroup END
 
 " }}}
 
@@ -236,30 +184,6 @@
 
 " }}}
 
-" xml {{{
-
-    " windowsで編集したxmlがUnixで変な風に表示されたら、整形できるかもしれない関数
-    " see : http://www.kaoriya.net/blog/2012/02/09/
-    function! s:remake_xml()
-        set ft=xml
-        %s/></>\r</ge
-        %s/>\(\S\)/>\r\1/ge
-        %s/\(\S\)</\1\r</ge
-        %s/\r//ge
-        :normal gg=G
-    endfunction
-
-    command! -nargs=0 RemakeXML call <SID>remake_xml()
-
-" }}}
-
-" vim-scala {{{
-
-    " sort scala import
-    let g:scala_sort_across_groups=1
-
-" }}}
-
 " vim-quickrun {{{
 
     let g:quickrun_config = {}
@@ -271,5 +195,12 @@
 
     let g:quickrun_config.xhtml = {'command': 'open', 'outputter': 'browser'}
     let g:quickrun_config.html = deepcopy(g:quickrun_config.xhtml)
+
+" }}}
+
+" agit.vim {{{
+
+    " let g:agit_enable_auto_show_commit = 0
+    " let g:agit_enable_auto_refresh = 1
 
 " }}}
