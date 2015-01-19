@@ -163,6 +163,7 @@ function! s:delete_end_of_sentence()
     endif
     call setpos('.', position)
 endfunction
+command! DeleteEOT call s:delete_end_of_sentence()
 
 " 保存時にfiletypeがmake以外の時はtabをスペースに変換する
 function! s:replace_tab_to_space()
@@ -177,6 +178,6 @@ endfunction
 
 augroup vimrc_rkaneko_bufwritepre
     autocmd!
-    autocmd BufWritePre * call s:delete_end_of_sentence()
+    " autocmd BufWritePre * call s:delete_end_of_sentence()
     autocmd BufWritePre * call s:replace_tab_to_space()
 augroup END
