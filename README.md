@@ -122,7 +122,7 @@ $ ghq get https://github.com/jonas/tig.git
 $ cd ~/.ghq/github.com/jonas/tig/
 # (for build tig)
 $ sudo apt-get install libncurses5-dev
-$ make && make install
+$ sudo make clean && sudo make distclean && sudo make && sudo make install
 $ source ~/.bashrc
 # see tig's help 
 $ tig -h
