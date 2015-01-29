@@ -44,6 +44,8 @@ $ sudo aptitude install xclip xsel
 $ sudo aptitude install zsh
 
 $ sudo aptitude install silversearcher-ag
+
+$ sudo aptitude install mercurial
 ```
 
 + CentOS
@@ -57,7 +59,7 @@ See also gists.
 
 ```bash
 # install xclip xsel
-$ sudo yum install xclip xsel
+$ sudo yum install xclip xsel mercurial
 ```
 
 ### install Prezto
@@ -109,15 +111,7 @@ $ [tmux's prefix] U
 $ go get github.com/motemen/ghq
 
 # install gh: hub clone implemented with golang
-$ mkdir -p ~/go/src/github.com/jingweno/
-$ cd ~/go/src/github.com/jingweno/
-$ git clone https://github.com/jingweno/gh.git
-$ cd gh
-$ script/install
-# see gh's version
-$ gh version
-git version 1.8.4.3
-gh version 2.1.0
+$ go get github.com/jingweno/gh
 
 # install Tig: text mode interface for Git
 $ ghq get https://github.com/jonas/tig.git
