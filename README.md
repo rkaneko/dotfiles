@@ -42,6 +42,8 @@ $ curl -fsSL https://gist.github.com/shime/5706655/raw/install.sh | sudo bash -e
 $ sudo aptitude install xclip xsel
 
 $ sudo aptitude install zsh
+
+$ sudo aptitude install silversearcher-ag
 ```
 
 + CentOS
@@ -129,7 +131,15 @@ $ tig -h
 # (and see dotfiles/.tigrc)
 ```
 ### for Go
+
 ```bash
+# gvm (Go version manager)
+$ curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash -s master $HOME/.govm
+
+$ echo [[ -s "/home/rkaneko/.govm/gvm/scripts/gvm" ]] && source "/home/rkaneko/.govm/gvm/scripts/gvm" >>$HOME/.zshrc.local
+
+$ source $HOME/.zshrc
+
 $ go get github.com/nsf/gocode
 
 $ go get github.com/golang/lint/golint
