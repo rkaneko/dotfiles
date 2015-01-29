@@ -138,6 +138,9 @@ $ curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/
 
 $ echo [[ -s "/home/rkaneko/.govm/gvm/scripts/gvm" ]] && source "/home/rkaneko/.govm/gvm/scripts/gvm" >>$HOME/.zshrc.local
 
+# symbolic link as govm (for avoid conflicting with Groovy enVironment Manager)
+$ (cd $GVM_ROOT/bin; ln -s gvm govm)
+
 $ source $HOME/.zshrc
 
 $ go get github.com/nsf/gocode
