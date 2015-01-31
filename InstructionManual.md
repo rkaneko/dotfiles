@@ -310,3 +310,14 @@ Utility
 
 +  `Ctrl-p + f`
     _なし : peco -> インクリメンタルサーチ -> Vimで開く。
+
+### PuTTY
+
+#### Copy & Paste
+
++ `Shift` + Right click
+   Paste from Host OS clipboard to Guest OS
+
++ (On PuTTY console)`Shift` + Select range
+   Cooy from Guest OS console to Host OS clipboard
+  

@@ -42,6 +42,10 @@ $ curl -fsSL https://gist.github.com/shime/5706655/raw/install.sh | sudo bash -e
 $ sudo aptitude install xclip xsel
 
 $ sudo aptitude install zsh
+
+$ sudo aptitude install silversearcher-ag
+
+$ sudo aptitude install mercurial
 ```
 
 + CentOS
@@ -55,7 +59,7 @@ See also gists.
 
 ```bash
 # install xclip xsel
-$ sudo yum install xclip xsel
+$ sudo yum install xclip xsel mercurial
 ```
 
 ### install Prezto
@@ -107,15 +111,7 @@ $ [tmux's prefix] U
 $ go get github.com/motemen/ghq
 
 # install gh: hub clone implemented with golang
-$ mkdir -p ~/go/src/github.com/jingweno/
-$ cd ~/go/src/github.com/jingweno/
-$ git clone https://github.com/jingweno/gh.git
-$ cd gh
-$ script/install
-# see gh's version
-$ gh version
-git version 1.8.4.3
-gh version 2.1.0
+$ go get github.com/jingweno/gh
 
 # install Tig: text mode interface for Git
 $ ghq get https://github.com/jonas/tig.git
@@ -129,7 +125,18 @@ $ tig -h
 # (and see dotfiles/.tigrc)
 ```
 ### for Go
+
 ```bash
+# gvm (Go version manager)
+$ curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash -s master $HOME/.govm
+
+$ echo [[ -s "/home/rkaneko/.govm/gvm/scripts/gvm" ]] && source "/home/rkaneko/.govm/gvm/scripts/gvm" >>$HOME/.zshrc.local
+
+# symbolic link as govm (for avoid conflicting with Groovy enVironment Manager)
+$ (cd $GVM_ROOT/bin; ln -s gvm govm)
+
+$ source $HOME/.zshrc
+
 $ go get github.com/nsf/gocode
 
 $ go get github.com/golang/lint/golint

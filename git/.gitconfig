@@ -63,7 +63,7 @@
     st = status
     fix-commit-with-msg = commit -a --amend -m # 直前のコミットを修正してコミット
     resetcm = reset --soft # 直前のコミットを取り消す(working directoryはそのまま)
-    resetcm-hard = reset --har # 直前のコミットを取り消す(working directoryも取り消す)
+    resetcm-hard = reset --hard # 直前のコミットを取り消す(working directoryも取り消す)
     aa = add -A
     unstagef = git reset HEAD # indexからfileを取り消す
     unstaged = git reset HEAD # indexからdirectoryを取り消す
