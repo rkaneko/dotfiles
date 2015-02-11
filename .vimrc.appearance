@@ -35,11 +35,15 @@ syntax enable
 if !has('gui_running')
     set t_Co=256
 endif
+
 set background=dark
-colorscheme molokai
-" colorscheme mrkn256
+try
+    colorscheme solarized
+catch
+endtry
+
 " 背景を半透明に
-"highlight Normal ctermbg=none
+highlight Normal ctermbg=none
 
 " ターミナルタイプによるカラー設定
 if &term =~ "xterm-256color" || "screen-256color"
@@ -93,12 +97,6 @@ endif
 "  let hl = substitute(hl, 'xxx', '', '')
 "  return hl
 "endfunction
-
-
-" vim-airline
-" set laststatus=2
-" let g:airline_powerline_fonts  = 1
-" let g:airline_theme            = 'tomorrow'
 
 " lightline.vim {{{
 
