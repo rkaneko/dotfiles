@@ -9,7 +9,8 @@
     excludesfile = ~/.gitignore
     pager = LESS=-R less
     editor = vim
-    # autocrlf = input
+    autocrlf = input
+
 
 [config]
     ui = true
