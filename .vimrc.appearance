@@ -38,7 +38,7 @@ endif
 
 set background=dark
 try
-    colorscheme solarized
+    colorscheme iceberg
 catch
 endtry
 
