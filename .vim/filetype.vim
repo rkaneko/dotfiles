@@ -15,3 +15,6 @@ au BufNewFile,BufRead *.ftl setf ftl.html
 
 " soy
 au BufNewFile,BufRead *.soy setf soy.html
+
+" json
+au BufNewFile,BufRead *.json setf json

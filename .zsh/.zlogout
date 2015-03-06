@@ -16,3 +16,7 @@ Thank you. Come again!
   -- Dr. Apu Nahasapeemapetilon
 EOF
 
+# Source local file
+if [[ -s "$HOME/.zlogout.local" ]]; then
+    source $HOME/.zlogout.local
+fi
