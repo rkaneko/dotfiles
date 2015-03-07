@@ -20,7 +20,7 @@ if (( $+commands[fortune] )); then
   print
 fi
 
-" Source local file
+# Source local file
 if [[ -s "$HOME/.zlogin.local" ]]; then
     source $HOME/.zlogin.local
 fi
