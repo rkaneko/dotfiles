@@ -71,6 +71,8 @@
     branch-remote = remote -v # remote branchの情報表示
     branch-local = branch -a # local branchを表示
     ds = diff --staged --color-words # indexとHEADのdiffを表示. --staged = --cached
+    dn = diff --name-only # 変更のあるfile名のみ表示
+    dstat = diff --stat # 変更行数とか表示
     d1 = diff HEAD~ # HEADとHEADから一つ前のdiff
     d2 = diff HEAD~~ # HEADとHEADから2個前のdiff
     d3 = diff HEAD~~~
