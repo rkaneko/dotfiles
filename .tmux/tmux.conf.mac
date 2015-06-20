@@ -5,7 +5,7 @@ set-option -g default-command 'reattach-to-user-namespace -l /bin/zsh'
 bind-key -t vi-copy y copy-pipe 'reattach-to-user-namespace pbcopy'
 bind-key -t vi-copy C-c copy-pipe 'reattach-to-user-namespace pbcopy'
 bind -r C-] paste-buffer
-bind -r C-v paste-buffer
+# bind -r C-v paste-buffer
 
 #set-option -g default-command \
 #'which reattach-to-user-namespace > /dev/null 2>&1 && \
