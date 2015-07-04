@@ -20,3 +20,8 @@ Thumbs.db$
 *.so$
 # OpenOffice Lock$
 .~lock.*$
+
+# global
+GTAGS
+GRTAGS
+GPATH

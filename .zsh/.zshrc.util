@@ -53,3 +53,8 @@ bindkey '^r' peco-select-history # C-r
 function fname() {
     find $1 -path '*.git*' -prune -o -print | ag -i "$2"
 }
+
+# ctags for Scala
+function stags() {
+    ctags -R . --exclude=target --exclude=project
+}

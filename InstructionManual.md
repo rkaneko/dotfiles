@@ -17,6 +17,13 @@ Terminal
 + `v`: `vim`
 + `tmux`: `tmux -2`
 
+
+ctags
+===
+
++ `Ctrl + ]`: tag jump
++ `Ctrl + : Ctrl + :`: back a previous tag
+
 tmux
 ===
 

@@ -23,8 +23,6 @@
 
 " }}}
 
-
-
 " Moving window {{{
 
     " command modeでsキーprefixにしたウィンドウ間移動を行う

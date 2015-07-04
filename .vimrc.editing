@@ -11,6 +11,11 @@
 
 " }}}
 
+" ctags {{{
+
+    set tags=tags;/
+
+" }}}
 
 " external grep command
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
@@ -18,20 +23,6 @@ set grepprg=grep\ -nh
 
 " vimgrep pipe quickfix-window
 autocmd QuickFixCmdPost *grep* cwindow
-
-" " friendly-grep.vim {{{
-
-"     nnoremap <C-g> <Esp>:FriendlyGrep<CR>
-
-"     " jump to * result
-"     nnoremap <LEFT> :cprevious<CR>
-"     nnoremap <RIGHT> :cnext<CR>
-"     nnoremap <UP> :<C-u>cfirst<CR>
-"     nnoremap <DOWN> :<C-u>clast<CR>
-
-"     let g:friendlygrep_display_result_in = 'quickfix'
-
-" " }}}
 
 " qfixgrep {{{
 
@@ -60,7 +51,8 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " }}}
 
-" C++ {{{
+" Clang {{{
+
     let g:clang_format#style_options = {
         \ 'AccessModifierOffset' : -1,
         \ 'AllowShortIfStatementsOnASingleLine' : 'true',
@@ -72,7 +64,6 @@ autocmd QuickFixCmdPost *grep* cwindow
     " map to <Leader>cf in C++ code
     autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
     autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-
 
 "}}}
 

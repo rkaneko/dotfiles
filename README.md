@@ -13,6 +13,7 @@ dotfiles
 
 (optional)
 + ag: The Silver searcher (for Unite grep)
++ ctags
 
 ##### prepare
 + MacOSX
@@ -26,6 +27,8 @@ $ brew install tmux
 $ brew install reattach-to-user-namespace
 
 $ brew install zsh
+
+$ brew install ctags
 ```
 
 + Ubuntu
@@ -46,6 +49,8 @@ $ sudo aptitude install zsh
 $ sudo aptitude install silversearcher-ag
 
 $ sudo aptitude install mercurial
+
+$ sudo aptitude install exuberant-ctags
 ```
 
 + CentOS
