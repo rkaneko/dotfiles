@@ -95,6 +95,9 @@ Unite
 +   `,f` :
     _:Unite buffer_ :バッファリストを開く。
 
++   `,` :
+    _:Unite file_rec_:再帰的なファイルリストを開く。(Insertモードに入ると検索.)
+
 +   `,b` :
     _:UniteWithBufferDir file :カレントバッファリストを開く。
 

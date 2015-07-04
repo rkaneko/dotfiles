@@ -1,5 +1,11 @@
-# java
+.git
+.svn
 tmp
 build
 target
-.svn
+*.class
+*.jar
+*.war
+.idea
+*.iml
+.m2
