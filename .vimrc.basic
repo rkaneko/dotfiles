@@ -106,8 +106,7 @@ set smartindent                      " Whew you start new line, vim makes indent
 " encoding
 set enc=utf-8
 set fenc=utf-8
-set fencs=utf-8
-set encoding=utf-8
+set fencs=utf-8,iso-2022-jp,cp932,sjis,euc-jp
 
 " paste option
 " see : http://qiita.com/quwa/items/019250dbca167985fe32
@@ -131,19 +130,7 @@ if &term =~ "xterm"
     cnoremap <special> <Esc>[201~ <nop>
 endif
 
-" key command when insert mode
-" on Ubuntu, <Leader>a and <C-e> are unavailable.
-"inoremap <Leader>a <Home>
-"inoremap <C-e> <End>
 inoremap <C-d> <Del>
-
-" on Ubuntu, <C-h> is backspace. <C-l> unavailable.
-" "inoremap <C-h> <Left>
-" inoremap <C-b> <Left>
-" inoremap <C-j> <Down>
-" inoremap <C-k> <Up>
-" "inoremap <C-l> <Righti>
-" inoremap <C-f> <Right>
 
 " when insert mode jj is esc
 inoremap jj <Esc>
