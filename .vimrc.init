@@ -18,11 +18,9 @@ let g:neobundle#install_max_processes = 4
 let g:neobundle#install_process_timeout = 180
 let g:neobundle#types#git#enable_submodule = 0
 
-if neobundle#has_cache()
-    NeoBundleLoadCache
-else
-    source ~/dotfiles/.vimrc.neobundle
-endif
+call neobundle#load_cache()
+source ~/dotfiles/.vimrc.neobundle
+NeoBundleSaveCache
 
 call neobundle#end()
 
