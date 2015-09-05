@@ -161,6 +161,10 @@
 " }}}
 
 " JavaScript {{{
+    
+    "Generate JsDoc
+    NeoBundleLazy 'heavenshell/vim-jsdoc',
+        \ { 'autoload' : { 'filetypes' : ['javascript'] } }
 
     "Google Closure's Soy templateing lauguage
     NeoBundle 'duganchen/vim-soy'
