@@ -162,6 +162,14 @@
 
 " JavaScript {{{
     
+    " Vastly improved to coding JavaScript on Vim
+    NeoBundleLazy 'pangloss/vim-javascript',
+        \ { 'autoload' : { 'filetypes' : ['javascript'] } }
+
+    " React JSX syntax highlighting and indenting
+    NeoBundleLazy 'mxw/vim-jsx',
+        \ { 'autoload' : { 'filetypes' : ['javascript'] } }
+
     "Generate JsDoc
     NeoBundleLazy 'heavenshell/vim-jsdoc',
         \ { 'autoload' : { 'filetypes' : ['javascript'] } }
