@@ -71,6 +71,9 @@
     NeoBundleLazy 'thinca/vim-quickrun',
         \ { 'autoload' : { 'filetypes' : ['html'] } }
 
+    " fuzzy finder
+    NeoBundle 'junegunn/fzf'
+
 " }}}
 
 " Unite {{{
