@@ -19,3 +19,6 @@ au BufNewFile,BufRead *.soy setf soy.html
 " json
 au BufNewFile,BufRead *.json setf json
 au BufNewFile,BufRead *.jsonnet setf json
+
+" nginx
+au BufNewFile,BufRead /etc/nginx/* setf nginx

@@ -189,3 +189,11 @@
         \ { 'autoload' : { 'filetypes' : ['ftl'] } }
 
 " }}}
+
+" nginx {{{
+
+    " nginx syntax
+    NeoBundleLazy 'vim-scripts/nginx.vim',
+        \ { 'autoload' : { 'filetypes' : ['nginx'] } }
+
+" }}}
