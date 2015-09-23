@@ -205,3 +205,11 @@
         \ { 'autoload' : { 'filetypes' : ['nginx'] } }
 
 " }}}
+
+" {{{
+
+    " Dockerfile syntax
+    NeoBundleLazy 'ekalinin/Dockerfile.vim',
+        \ { 'autoload' : { 'filetypes' : ['Dockerfile'] } }
+
+" }}}
