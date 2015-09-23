@@ -177,6 +177,14 @@
     NeoBundleLazy 'heavenshell/vim-jsdoc',
         \ { 'autoload' : { 'filetypes' : ['javascript'] } }
 
+    " vim-react-snippets:
+    NeoBundleLazy 'justinj/vim-react-snippets',
+        \ { 'autoload' : { 'filetypes' : ['javascript'] } }
+
+    " React.js JSX support for syntax
+    NeoBundleLazy 'jaxbot/syntastic-react',
+        \ { 'autoload' : { 'filetypes' : ['javascript'] } }
+
     "Google Closure's Soy templateing lauguage
     NeoBundle 'duganchen/vim-soy'
 

@@ -13,3 +13,5 @@ source ~/dotfiles/.vimrc.util
 source ~/dotfiles/.vimrc.editing
 "GitLogViewer config
 source ~/dotfiles/.vimrc.gitlogviewer
+"snippet config
+source ~/dotfiles/.vimrc.snippet
