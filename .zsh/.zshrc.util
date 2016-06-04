@@ -20,6 +20,11 @@ function vifind () {
     find -name $1 -exec vim {} \;
 }
 
+# fzf -> Vim
+function vif () {
+    vi `fzf`
+}
+
 # ls -> peco
 # see: http://qiita.com/sona-tar/items/47800e52f972b17f73bb
 # Usage: vi ls-peco (or C-p l)
