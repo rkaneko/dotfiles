@@ -42,6 +42,8 @@
 
     " Easy and high speed coding method
     NeoBundle 'mattn/sonictemplate-vim'
+    " My template for sonictemplate.vim
+    NeoBundle 'rkaneko/sonictemplate-template.vim'
 
     " commentary.vim : utility for handling comment
     NeoBundle 'tpope/vim-commentary'
