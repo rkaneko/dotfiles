@@ -45,3 +45,6 @@ ln -s $HOME/dotfiles/git/.gitconfig $HOME/.gitconfig
 
 # for git submodules
 git submodule init
+
+# npm config
+ln -s $HOME/dotfiles/npm/.npmrc $HOME/.npmrc
