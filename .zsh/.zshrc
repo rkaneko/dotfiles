@@ -22,3 +22,5 @@ fi
 if [[ -s "$HOME/dotfiles/.zsh/.zshrc.util" ]]; then
     source "$HOME/dotfiles/.zsh/.zshrc.util"
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
