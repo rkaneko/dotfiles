@@ -23,6 +23,7 @@ alias gdcs='git diff --cached --stat --color'
 alias gdh='git diff HEAD~ --color'
 alias gdhs='git diff HEAD~ --stat --color'
 alias ggrep='git grep --color -e'
+alias -g GB='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
 
 # utility short cut
 alias up='cd ..'
