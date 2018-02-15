@@ -203,11 +203,11 @@
 
 " }}}
 
-" Templates {{{
+" Schema {{{
 
-    "FreeMarker
-    NeoBundleLazy 'chaquotay/ftl-vim-syntax',
-        \ { 'autoload' : { 'filetypes' : ['ftl'] } }
+    "GraphQL
+    NeoBundleLazy 'jparise/vim-graphql',
+        \ { 'autoload' : { 'filetypes' : ['graphql', 'gql'] } }
 
 " }}}
 
