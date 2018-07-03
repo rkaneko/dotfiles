@@ -155,7 +155,7 @@ command! DeleteEOT call s:delete_end_of_sentence()
 " 保存時にfiletypeがmake以外の時はtabをスペースに変換する
 function! s:replace_tab_to_space()
     let position = getpos('.')
-    if &filetype !~ 'make'
+    if &filetype !~ 'make' || &filetype !~ 'markdown'
         " :%s/\t/  /ge
         set expandtab
         retab

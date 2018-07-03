@@ -55,7 +55,7 @@
     NeoBundle 'thinca/vim-qfreplace'
 
     " browser utility
-    NeoBundle 'tyru/open-browser.vim'
+    " NeoBundle 'tyru/open-browser.vim'
 
     " syntax checker
     NeoBundle 'scrooloose/syntastic'
@@ -224,5 +224,12 @@
     " Dockerfile syntax
     NeoBundleLazy 'ekalinin/Dockerfile.vim',
         \ { 'autoload' : { 'filetypes' : ['Dockerfile'] } }
+
+" }}}
+
+" {{{
+    " Terraform integration
+    NeoBundleLazy 'hashivim/vim-terraform',
+        \ { 'autoload' : { 'filetypes': ['terraform'] } }
 
 " }}}
