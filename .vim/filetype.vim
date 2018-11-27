@@ -1,3 +1,6 @@
+" pyi
+au BufNewFile,BufRead *.pyi setf python
+
 " ssp
 au BufNewFile,BufRead *.ssp setf ssp.html
 

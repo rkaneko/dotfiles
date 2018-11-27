@@ -198,8 +198,8 @@
         \ { 'autoload' : { 'filetypes' : ['typescript'] } }
 
     " Make my Vim a TypeScript IDE
-    NeoBundleLazy 'Quramy/tsuquyomi',
-        \ { 'autoload' : { 'filetypes' : ['typescript'] } }
+    " NeoBundleLazy 'Quramy/tsuquyomi',
+        " \ { 'autoload' : { 'filetypes' : ['typescript'] } }
 
 " }}}
 
