@@ -24,3 +24,8 @@ if [[ -s "$HOME/dotfiles/.zsh/.zshrc.util" ]]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# for fzf or kernel issue: https://github.com/junegunn/fzf/issues/1486
+export FZF_DEFAULT_OPTS="--height 90%"
+export FZF_CTRL_T_OPTS="--height 90%"
+export FZF_CTRL_R_OPTS="--height 90%"
+export FZF_ALT_C_OPTS="--height 90%"
