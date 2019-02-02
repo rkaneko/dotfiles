@@ -22,7 +22,10 @@ function vifind () {
 
 # fzf -> Vim
 function vif () {
-    vi `fzf`
+    local file=`fzf`
+    if [ -f "${file}" ]; then
+        vi ${file}
+    fi
 }
 
 # ls -> peco
