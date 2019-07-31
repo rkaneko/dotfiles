@@ -70,8 +70,8 @@
     NeoBundle 'vim-scripts/sudo.vim'
 
     " run a command and show its result
-    NeoBundleLazy 'thinca/vim-quickrun',
-        \ { 'autoload' : { 'filetypes' : ['html'] } }
+    " NeoBundleLazy 'thinca/vim-quickrun',
+    "     \ { 'autoload' : { 'filetypes' : ['html'] } }
 
     " fuzzy finder
     NeoBundle 'junegunn/fzf'
@@ -101,10 +101,10 @@
 " Git {{{
 
     " fugitive.vim : Git wrapper
-    NeoBundle 'tpope/vim-fugitive'
+    " NeoBundle 'tpope/vim-fugitive'
 
     " agit.vim : gitk clone for Vim
-    NeoBundle 'cohama/agit.vim'
+    " NeoBundle 'cohama/agit.vim'
 
 " }}}
 
@@ -147,17 +147,17 @@
 " markdown {{{
 
     " preview markdown
-    NeoBundleLazy 'kannokanno/previm',
-        \ { 'autoload' : { 'filetypes' : ['markdown'] } }
+    " NeoBundleLazy 'kannokanno/previm',
+    "     \ { 'autoload' : { 'filetypes' : ['markdown'] } }
 
 " Golang {{{
 
     "vim-gocode depends on nsf/gocode
-    NeoBundleLazy 'Blackrush/vim-gocode',
-        \ { 'autoload' : { 'filetypes' : ['go'] } }
+    " NeoBundleLazy 'Blackrush/vim-gocode',
+    "     \ { 'autoload' : { 'filetypes' : ['go'] } }
 
-    NeoBundleLazy 'fatih/vim-go',
-        \ { 'autoload' : { 'filetypes' : ['go'] } }
+    " NeoBundleLazy 'fatih/vim-go',
+    "     \ { 'autoload' : { 'filetypes' : ['go'] } }
 
     " NeoBundleLazy 'dgryski/vim-godef',
         " \ { 'autoload' : { 'filetypes' : ['go'] } }
@@ -179,15 +179,15 @@
         \ { 'autoload' : { 'filetypes' : ['javascript'] } }
 
     " vim-react-snippets:
-    NeoBundleLazy 'justinj/vim-react-snippets',
-        \ { 'autoload' : { 'filetypes' : ['javascript'] } }
+    " NeoBundleLazy 'justinj/vim-react-snippets',
+    "     \ { 'autoload' : { 'filetypes' : ['javascript'] } }
 
     " React.js JSX support for syntax
     NeoBundleLazy 'jaxbot/syntastic-react',
         \ { 'autoload' : { 'filetypes' : ['javascript'] } }
 
     "Google Closure's Soy templateing lauguage
-    NeoBundle 'duganchen/vim-soy'
+    " NeoBundle 'duganchen/vim-soy'
 
 " }}}
 
@@ -230,6 +230,13 @@
 " {{{
     " Terraform integration
     NeoBundleLazy 'hashivim/vim-terraform',
-        \ { 'autoload' : { 'filetypes': ['terraform'] } }
+        \ { 'autoload' : { 'filetypes' : ['terraform'] } }
+
+" }}}
+
+" Rust {{{
+
+    NeoBundleLazy 'rust-lang/rust.vim',
+        \ { 'autoload' : { 'filetypes' : ['rust'] } }
 
 " }}}
