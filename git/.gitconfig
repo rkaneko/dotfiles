@@ -5,6 +5,10 @@
 [include]
     path = ~/.gitconfig.local
 
+[url "github:"]
+    Insteadof = https://github.com/
+    Insteadof = git@github.com:
+
 [core]
     excludesfile = ~/.gitignore
     pager = less -r

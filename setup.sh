@@ -31,11 +31,11 @@ ln -s $HOME/dotfiles/.tmux/.tmux-powerlinerc $HOME/.tmux-powerlinerc
 
 # zsh
 # ZDOT_FILES=`find $HOME/dotfiles/.zsh -type f | awk -F/ '{print $NF}'`
-ZDOT_FILES=( .zlogin .zlogout .zpreztorc .zshenv .zprofile .zshrc )
-for ZDOT_FILE in ${ZDOT_FILES[@]}
-do
-    ln -s $HOME/dotfiles/.zsh/$ZDOT_FILE $HOME/$ZDOT_FILE
-done
+# ZDOT_FILES=( .zlogin .zlogout .zpreztorc .zshenv .zprofile .zshrc )
+# for ZDOT_FILE in ${ZDOT_FILES[@]}
+# do
+#     ln -s $HOME/dotfiles/.zsh/$ZDOT_FILE $HOME/$ZDOT_FILE
+# done
 # zsh end
 
 # make symbolic link
