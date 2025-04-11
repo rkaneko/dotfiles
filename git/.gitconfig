@@ -89,3 +89,5 @@
     # mergeの際にconflictが起きたファイルを編集
     edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
     gr = grep
+[init]
+	defaultBranch = main
